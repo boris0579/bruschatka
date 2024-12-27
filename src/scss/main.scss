@@ -1,0 +1,19 @@
+@use "base/fonts";
+@use "base/variables" as *;
+@use "base/reset";
+
+// UI
+@use "UI/buttons";
+
+body {
+    font-family: $font-family-base;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1rem;
+    letter-spacing: normal;
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+}

@@ -1,0 +1,88 @@
+@use "../base/variables" as *;
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    width: max-content;
+    border-radius: 8px;
+    font-size: initial;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    gap: 8px;
+    transition: $transition-slow;
+
+    &--main {
+        background-color: $main-color;
+        color: #fff;
+    }
+
+    &--wa {
+        background-color: $wa-color;
+        color: #fff;
+    }
+
+    &--dark {
+        background-color: $dark-color;
+        color: #fff;
+    }
+
+    &--action {
+        background-color: $action-color;
+        color: #fff;
+    }
+
+    &--outline-dark {
+        color: #1e1e1e;
+        border: 1px solid $dark-color;
+        &:hover {
+            background-color: $dark-color;
+            color: #fff;
+        }
+    }
+
+    &--outline-main {
+        color: $main-color;
+        border: 1px solid $main-color;
+        &:hover {
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+
+    &__icon {
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+
+        &--wa {
+            width: 22px;
+            height: 22px;
+            background-image: url("../assets/icons/wa.svg");
+        }
+
+        &--main,
+        &--white {
+            width: 11px;
+            height: 11px;
+        }
+
+        &--white {
+            background-image: url("../assets/icons/arrow-white-right.svg");
+        }
+
+        &--main {
+            // Планая смена цвета иконки
+            mask-image: url("../assets/icons/arrow-white-right.svg");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            background-color: $main-color;
+            transition: $transition-slow;
+            .btn:hover & {
+                background-color: #fff;
+            }
+        }
+    }
+}
