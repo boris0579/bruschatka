@@ -1,13 +1,16 @@
 // Базовый шрифт для всего текста
 $font-family-base: "Manrope", sans-serif;
+$font-color: #1e1e1e;
+
+$footer-bg: #1e1e1e;
 
 // Ширина контейнера
-$max-width: 1160px;
+$max-width: 1220px;
 
 $main-color: #744746;
 $dark-color: #1e1e1e;
 $wa-color: #39b400;
-$action-color: #ff2020;
+$red-color: #ff2020;
 
 // Анимация
 $transition-fast: background-color 0.2s ease, color 0.2s ease;

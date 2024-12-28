@@ -1,0 +1,96 @@
+@use "../base/variables" as *;
+
+.header {
+    &__container {
+        margin-top: 1.5625rem !important; // 25px
+        display: flex;
+        column-gap: 1.25rem; // 20px
+    }
+
+    &__logo {
+        flex: 0 0 15.5625rem; // 249px
+        height: 4.625rem; // 74px
+    }
+
+    &__logo-link {
+        display: block;
+    }
+
+    &__catalog {
+        flex: 0 0 5rem; // 80px
+    }
+
+    &__catalog-btn {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.75rem; // 12px
+        line-height: 1;
+        width: 5rem; // 80px
+        height: 3.75rem; // 60px
+        padding: 0.9375rem 0.75rem 0.5rem; // 15px 12px 8px
+    }
+
+    &__right {
+        display: flex;
+        flex: 1;
+    }
+
+    &__top,
+    &__bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    &__top {
+        gap: 1.25rem; // 20px
+    }
+
+    &__bottom {
+        gap: 1.5rem; // 24px
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        &__link {
+            &--email {
+                color: $font-color;
+            }
+        }
+        &__list {
+            display: flex;
+            gap: 1.5rem; // 24px
+            line-height: 1.2;
+            &--top {
+                gap: 1.25rem; // 20px
+                white-space: nowrap;
+                font-size: 0.75rem; // 12px
+                color: rgba(51, 63, 72, 0.85);
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+    }
+
+    &__actions {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem; // 12px
+    }
+
+    &__phone {
+        font-weight: 500;
+        margin-right: 0.9375rem; // 15px
+    }
+
+    &__address {
+        font-style: normal;
+    }
+}

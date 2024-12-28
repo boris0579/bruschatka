@@ -4,16 +4,35 @@
 
 // UI
 @use "UI/buttons";
+@use "UI/header";
+@use "UI/footer";
 
 body {
     font-family: $font-family-base;
     font-weight: normal;
     line-height: normal;
     font-size: 1rem;
+    color: $font-color;
     letter-spacing: normal;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .container {
     max-width: $max-width;
     margin: 0 auto;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden; /* Обрезать текст, если он не помещается */
+    text-overflow: ellipsis; /* Добавить многоточие (...) в конце */
 }
