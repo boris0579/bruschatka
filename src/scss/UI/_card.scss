@@ -1,0 +1,206 @@
+@use "../base/variables" as *;
+
+.card {
+    min-width: 16.25rem; // 260px
+    background: #f5f5f5;
+    outline: 0.03125rem solid #d6d6d6; // 0.5px
+    border-radius: 0.5rem; // 8px
+    overflow: hidden;
+    padding: 0 1.5rem; // 24px
+
+    @media (max-width: 75rem) {
+        // 1200px
+        padding: 0 1rem;
+        min-width: 11.875rem; // 190px
+    }
+
+    &__figure {
+        width: 100%;
+        height: 11.5625rem; // 185px
+    }
+
+    &__img {
+        border-radius: 0.5rem; // 8px
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+    }
+
+    &__aside {
+        position: relative;
+        margin: 0 -1.5rem; // -24px
+    }
+
+    &__header {
+        padding-top: 1rem;
+
+        @media (max-width: 75rem) {
+            // 1200px
+            padding-top: 0.625rem; // 10px
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.75rem; // 12px
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.125rem; // 18px
+        line-height: 1.5625rem; // 25px
+        color: $font-color;
+
+        @media (max-width: 75rem) {
+            // 1200px
+            font-size: 1rem;
+        }
+    }
+
+    &__sku {
+        font-size: 0.875rem; // 14px
+        line-height: 1.1875rem; // 19px
+        color: #6d6d6d;
+        margin: 0.5rem 0 0.75rem; // 8px 0 12px
+    }
+
+    &__info {
+        display: block;
+        font-weight: 600;
+        font-size: 0.75rem; // 12px
+        line-height: 1rem; // 16px
+        color: #34a400;
+        margin-bottom: 0.3125rem; // 5px
+    }
+
+    &__current-price {
+        font-weight: 500;
+        font-size: 2.25rem; // 36px
+        color: #ff2020;
+        @media (max-width: 75rem) {
+            // 1200px
+            font-size: 2rem; // 32px
+        }
+    }
+
+    &__price-container {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.375rem; // 6px
+    }
+
+    &__price-desc {
+        font-weight: 600;
+        font-size: 0.75rem; // 12px
+        line-height: 1rem; // 16px
+        color: #6d6d6d;
+    }
+
+    &__old-price {
+        font-weight: 700;
+        font-size: 1.5rem; // 24px
+        line-height: 2.0625rem; // 33px
+        text-decoration-line: line-through;
+        color: #6d6d6d;
+    }
+
+    &__actions {
+        margin-top: 1rem; // 16px
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; // 8px
+        @media (max-width: 75rem) {
+            // 1200px
+            .btn__text--wa span {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.625rem; // 10px
+    }
+
+    &__features-name {
+        font-size: 0.75rem; // 12px
+        line-height: 1rem; // 16px
+        color: #6d6d6d;
+    }
+
+    &__features-value {
+        font-weight: 500;
+        font-size: 1.125rem; // 18px
+        line-height: 1.5625rem; // 25px
+        color: $font-color;
+    }
+
+    &__color-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem; // 10px
+    }
+
+    &__color {
+        width: 1.8125rem; // 29px
+        height: 1.8125rem; // 29px
+        border-radius: 0.25rem; // 4px
+        flex-shrink: 0;
+    }
+
+    &__btn-show {
+        grid-column: span 3;
+        margin: 0 auto;
+
+        @media (max-width: 75rem) {
+            // 1200px
+            margin-top: 0.5rem; // 8px
+        }
+
+        @media (max-width: 48rem) {
+            // 768px
+            grid-column: span 2;
+        }
+
+        @media (max-width: 28.125rem) {
+            // 450px
+            grid-column: span 1;
+        }
+    }
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; // 40px
+
+    @media (max-width: 75rem) {
+        // 1200px
+        gap: 1rem;
+    }
+
+    @media (max-width: 48rem) {
+        // 768px
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 28.125rem) {
+        // 450px
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 26.5625rem) {
+        // 425px
+        .btn__text--wa {
+            display: block;
+        }
+    }
+}

@@ -4,13 +4,26 @@
 
 // UI
 @use "UI/buttons";
+@use "UI/input";
+@use "UI/dropdown";
+@use "UI/checkbox";
+@use "UI/badge";
 @use "UI/header";
 @use "UI/footer";
+@use "UI/card";
+@use "UI/filter";
+@use "UI/categories";
+@use "UI/materials";
+@use "UI/consultation";
+@use "UI/sidebar";
+
+// Plugins
+@use "plugins/splide";
 
 body {
     font-family: $font-family-base;
     font-weight: normal;
-    line-height: normal;
+    line-height: 1;
     font-size: 1rem;
     color: $font-color;
     letter-spacing: normal;
@@ -29,10 +42,24 @@ body {
 .container {
     max-width: $max-width;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .no-wrap {
     white-space: nowrap;
     overflow: hidden; /* Обрезать текст, если он не помещается */
     text-overflow: ellipsis; /* Добавить многоточие (...) в конце */
+}
+
+.active {
+    display: block;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.blurred {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
 }

@@ -1,0 +1,20 @@
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0.75rem; // 4px, 12px
+    width: max-content;
+    height: 1.875rem; // 30px
+    font-size: 1rem; // 16px
+    line-height: 1.375rem; // 22px
+    color: #ffffff;
+    border-radius: 0.5rem; // 8px
+
+    &--hit {
+        background-color: #744746;
+    }
+
+    &--sample {
+        background-color: #000;
+    }
+}
