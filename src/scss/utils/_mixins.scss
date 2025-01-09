@@ -1,0 +1,15 @@
+@mixin masked-icon($url, $initial-color, $transition) {
+    mask-image: url(#{$url});
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: $initial-color;
+    transition: $transition;
+}
+
+@mixin hide-scrollbar {
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+
+    &::-webkit-scrollbar {
+        display: none; /* Скрываем скроллбар в WebKit-браузерах */
+    }
+}
