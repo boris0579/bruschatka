@@ -11,12 +11,12 @@
     transform: translateY(-100%);
     transition: transform 0.3s ease;
     z-index: -1;
-    //box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 
     &[data-panel="open"] {
         top: 100%;
         transform: translateY(0);
-        //box-shadow: 0 1.25rem 3.125rem rgba(159, 159, 159, 0.25); // 20px 50px
+        box-shadow: 0 1.25rem 3.125rem rgba(159, 159, 159, 0.25); // 20px 50px
     }
 
     &__menu {

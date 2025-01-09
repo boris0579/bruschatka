@@ -4,7 +4,7 @@ class Sidebar {
         this.menuToggle = document.querySelector('[data-toggle-menu]') // Элемент, который переключает меню
         this.menuIcon = this.menuToggle.querySelector('[data-icon-menu]') // Иконка меню (меню/закрыть)
         this.sidePanel = document.querySelector('[data-panel]') // меню
-        this.mainContent = document.querySelector('main') // Находим тег main
+        this.overlay = document.querySelector('.overlay') // Наложение
 
         // Привязываем обработчики событий для взаимодействия с меню
         this.addEventListeners()
@@ -47,8 +47,8 @@ class Sidebar {
         // Отключаем скролл
         document.body.classList.add('no-scroll')
 
-        // Добавляем класс для размытия фона
-        this.mainContent?.classList.add('blurred')
+        // Показываем наложение
+        this.overlay.classList.add('active')
     }
 
     // Метод для закрытия боковой панели
@@ -62,8 +62,8 @@ class Sidebar {
         // Включаем скролл
         document.body.classList.remove('no-scroll')
 
-        // Убираем класс размытия фона
-        this.mainContent?.classList.remove('blurred')
+        // Скрываем наложение
+        this.overlay.classList.remove('active')
     }
 
     // Метод для обработки клика вне области боковой панели
