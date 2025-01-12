@@ -18,14 +18,31 @@
             -webkit-appearance: none;
         }
 
+        &--qty {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0.75rem 0.9375rem 0.75rem 1.5rem; // 12px , 15px, 24px
+            background-color: transparent;
+            border: 0.0625rem solid #6d6d6d; // 1px
+            border-radius: 0.5rem; // 8px
+            font-weight: 600;
+            font-size: 1.125rem; // 18px
+            line-height: 1.5625rem; // 25px
+            color: $font-color;
+        }
+
         &::placeholder {
             color: #888;
         }
 
-        &:focus {
-            border-color: $main-color;
-            box-shadow: 0 0 0.1875rem 0.1875rem rgba(116, 71, 70, 0.2); // 3px 3px
-            border: 0.0625rem solid transparent; // 1px
+        &--focus {
+            &:focus {
+                border-color: $main-color;
+                box-shadow: 0 0 0.1875rem 0.1875rem rgba(116, 71, 70, 0.2); // 3px 3px
+                border: 0.0625rem solid transparent; // 1px
+            }
         }
 
         &::-webkit-outer-spin-button,

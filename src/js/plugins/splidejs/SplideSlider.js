@@ -17,9 +17,6 @@ export default class SplideSlider {
 
         // Если элементы не найдены, выводим ошибку в консоль и прекращаем выполнение
         if (elements.length === 0) {
-            console.error(
-                `No elements found with attribute [data-splide="${this.attribute}"].`
-            )
             return
         }
 

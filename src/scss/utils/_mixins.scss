@@ -13,3 +13,13 @@
         display: none; /* Скрываем скроллбар в WebKit-браузерах */
     }
 }
+
+// Миксин для отображения скроллбара
+@mixin show-scrollbar {
+    overflow: auto; /* Включаем прокрутку */
+    scrollbar-width: auto; /* Возвращаем стандартный скроллбар в Firefox */
+
+    &::-webkit-scrollbar {
+        display: block; /* Отображаем скроллбар в WebKit-браузерах */
+    }
+}

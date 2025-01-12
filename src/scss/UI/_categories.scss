@@ -1,23 +1,21 @@
 .categories {
     padding-bottom: 2.375rem; // 38px
 
-    @media (max-width: 990px) {
-        padding-bottom: 2rem;
+    @media (max-width: 61.875rem) {
+        // 990px
+        padding-bottom: 2rem; // 32px
     }
     &__container {
         display: flex;
         overflow-x: auto;
         overflow-y: hidden;
         gap: 2.4375rem; // 39px
-        -webkit-overflow-scrolling: touch; // Для плавного скроллинга на мобильных устройствах
-        scroll-snap-type: x mandatory; // Плавный скролл по категориям
-        scrollbar-width: thin; // Для Firefox
-        padding-top: 13px !important;
-        padding-bottom: 13px !important;
+        padding-bottom: 0.8125rem !important; // 13px
         justify-content: space-between;
 
-        @media (max-width: 425px) {
-            gap: 1rem;
+        @media (max-width: 26.5625rem) {
+            // 425px
+            gap: 1rem; // 16px
         }
     }
 
@@ -29,24 +27,16 @@
         overflow: hidden;
         border-radius: 0.5625rem; // 9px
         cursor: pointer;
+    }
 
-        // Плавный возврат к обычному состоянию после потери фокуса
-        &:hover &__image,
-        &:focus &__image {
-            transform: scale(1.1); // Масштабируем изображение при наведении
-            transition: transform 0.3s ease-in-out;
-        }
+    &__item:hover &__image {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
 
-        // Плавный возврат к исходному состоянию после потери фокуса
-        &:not(:hover) &__image {
-            transform: scale(1); // Возвращаем исходный масштаб
-            transition: transform 0.3s ease-in-out;
-        }
-
-        @media (max-width: 425px) {
-            width: 172px;
-            height: 131px;
-        }
+    &__item:not(:hover) &__image {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
     }
 
     &__title {
@@ -58,9 +48,10 @@
         line-height: 2.0625rem; // 33px
         color: #ffffff;
 
-        @media (max-width: 425px) {
-            font-size: 18px;
-            line-height: 25px;
+        @media (max-width: 26.5625rem) {
+            // 425px
+            font-size: 1.125rem; // 18px
+            line-height: 1.5625rem; // 25px
         }
     }
 
@@ -70,9 +61,6 @@
         object-fit: cover;
         object-position: center;
         border-radius: 0.5625rem; // 9px
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 
     @media (max-width: 48rem) {

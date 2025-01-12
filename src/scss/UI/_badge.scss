@@ -17,4 +17,11 @@
     &--sample {
         background-color: #000;
     }
+
+    &--blur {
+        padding: 0.5rem 0.75rem; // 8px, 12px
+        background: rgba(68, 68, 68, 0.3);
+        backdrop-filter: blur(2px);
+        height: max-content;
+    }
 }
