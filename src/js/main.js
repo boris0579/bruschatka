@@ -8,6 +8,7 @@ import ProductGallery from './ProductGallery'
 import Select from './Select'
 import ColorPicker from './ColorPicker'
 import Tabs from './Tabs'
+import Modal from './Modal'
 
 document.addEventListener('DOMContentLoaded', () => {
     // Инициализация всех dropdown'ов на странице
@@ -67,4 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selector: '[data-tabs]', // Селектор контейнера с табами
         activeTabIndex: 1 // Активный таб
     })
+
+    // Modals
+    new Modal()
 })

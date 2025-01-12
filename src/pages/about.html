@@ -156,6 +156,7 @@
                                         type="button"
                                         class="btn btn--main btn--call header__btn-call"
                                         title="Открыть форму для заказа звонка"
+                                        data-modal-target="order-call"
                                     >
                                         <span
                                             class="btn__icon btn__icon--call"
@@ -667,6 +668,7 @@
                             class="btn btn--main"
                             aria-label="Открыть форму для заказа звонка"
                             title="Заказать звонок"
+                            data-modal-target="order-call"
                         >
                             Заказать звонок
                         </button>
@@ -733,6 +735,67 @@
         <!-- FOOTER END -->
 
         <!-- Элемент наложения (overlay) -->
-        <div class="overlay"></div>
+        <div class="overlay" data-overlay></div>
+
+        <!-- MODAL: Заказать звонок -->
+        <div class="modal order-modal-call" data-modal="order-call">
+            <div class="modal__content">
+                <div class="modal__main-content">
+                    <button
+                        class="modal__close"
+                        title="Закрыть"
+                        data-close-button
+                        aria-label="Закрыть окно"
+                    ></button>
+                    <h3 class="modal__title">Заказать звонок</h3>
+                    <form class="modal__form" action="#" method="post">
+                        <div class="input">
+                            <input
+                                id="name"
+                                class="input__field input__field--text input__field--focus"
+                                type="text"
+                                name="name"
+                                placeholder="Ваше имя"
+                                required
+                            />
+                        </div>
+                        <div class="input">
+                            <input
+                                id="email"
+                                class="input__field input__field--text input__field--focus"
+                                type="email"
+                                name="email"
+                                placeholder="Ваш email"
+                                required
+                            />
+                        </div>
+                        <div class="input">
+                            <input
+                                id="tel"
+                                class="input__field input__field--text input__field--focus"
+                                type="tel"
+                                name="tel"
+                                placeholder="+7 (000) 000-00-00*"
+                                required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn--red order-modal-call__btn"
+                        >
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+                <div class="modal__policy">
+                    <p>
+                        Нажимая кнопку “Отправить заявку”, вы даете согласие на
+                        обработку персональных данных и соглашаетесь с политикой
+                        конфиденциальности.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL END -->
     </body>
 </html>

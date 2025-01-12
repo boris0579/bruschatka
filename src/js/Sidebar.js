@@ -12,7 +12,7 @@ class Sidebar {
         this.menuToggle = document.querySelector('[data-toggle-menu]') // Элемент, который переключает меню
         this.menuIcon = this.menuToggle.querySelector('[data-icon-menu]') // Иконка меню (меню/закрыть)
         this.sidePanel = document.querySelector('[data-panel]') // меню
-        this.overlay = document.querySelector('.overlay') // Наложение
+        this.overlay = document.querySelector('[data-overlay]') // Наложение
 
         // Привязываем обработчики событий для взаимодействия с меню
         this.addEventListeners()

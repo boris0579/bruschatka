@@ -34,14 +34,14 @@
         }
 
         &::placeholder {
-            color: #888;
+            color: #6d6d6d;
         }
 
         &--focus {
             &:focus {
                 border-color: $main-color;
-                box-shadow: 0 0 0.1875rem 0.1875rem rgba(116, 71, 70, 0.2); // 3px 3px
-                border: 0.0625rem solid transparent; // 1px
+                box-shadow: 0 0 0.1875rem 0.1875rem rgba(202, 202, 202, 0.2); // 3px 3px
+                //border: 0.0625rem solid transparent; // 1px
             }
         }
 
@@ -54,7 +54,7 @@
         &::placeholder {
             font-size: 1rem; // 16px
             line-height: 1.5rem; // 24px
-            color: #181d2e;
+            color: #6d6d6d;
         }
     }
 }

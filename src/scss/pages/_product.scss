@@ -49,6 +49,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         @include hide-scrollbar;
+        flex-shrink: 0;
         @media (max-width: 64rem) {
             // 1024px
             order: 2;
@@ -119,17 +120,17 @@
 
     &__main-media {
         position: relative;
-        width: 32.875rem; // 526px
-        height: 29.5625rem; // 473px
+        max-width: 32.875rem; // 526px
+        max-height: 29.5625rem; // 473px
         @media (max-width: 64rem) {
             // 1024px
-            width: 24.5625rem; // 393px
-            height: 22.25rem; // 356px
+            max-width: 24.5625rem; // 393px
+            max-height: 22.25rem; // 356px
         }
 
         @media (max-width: 56.25rem) {
             // 900px
-            width: 100%;
+            max-width: 100%;
         }
 
         @media (max-width: 40.625rem) {
