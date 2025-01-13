@@ -276,6 +276,36 @@
 
         <!-- MAIN START -->
         <main class="main">
+            <!-- BANNER START -->
+            <section class="banner">
+                <div class="container banner__container">
+                    <div class="banner__content">
+                        <h1 class="banner__title">
+                            Внимание,<br />
+                            акция!
+                        </h1>
+                        <p class="banner__text">
+                            Скидки на всю продукцию из сланца — элегантного
+                            премиального камня серого цвета!
+                        </p>
+                        <button
+                            type="button"
+                            class="btn btn--red banner__btn"
+                            aria-label="Открыть форму для заказа звонка"
+                            data-modal-target="call"
+                        >
+                            Заказать звонок
+                        </button>
+                    </div>
+                </div>
+                <div class="banner__images">
+                    <div class="banner__image banner__image--left"></div>
+                    <div class="banner__image banner__image--center"></div>
+                    <div class="banner__image banner__image--right"></div>
+                </div>
+            </section>
+
+            <!-- BANNER END -->
             <!-- CATEGORIES START -->
             <section class="categories">
                 <div class="container">
@@ -1538,6 +1568,67 @@
 
         <!-- Элемент наложения (overlay) -->
         <div class="overlay" data-overlay></div>
+
+        <!-- MODAL: Заказать звонок -->
+        <div class="modal modal--call" data-modal="call">
+            <div class="modal__wrapper">
+                <div class="modal__main-content">
+                    <button
+                        class="modal__close"
+                        title="Закрыть"
+                        data-close-button
+                        aria-label="Закрыть окно"
+                    ></button>
+                    <h3 class="modal__title">Заказать звонок</h3>
+                    <form class="modal__form" action="#" method="post">
+                        <div class="input">
+                            <input
+                                id="name"
+                                class="input__field input__field--text input__field--focus"
+                                type="text"
+                                name="name"
+                                placeholder="Ваше имя"
+                                required
+                            />
+                        </div>
+                        <div class="input">
+                            <input
+                                id="email"
+                                class="input__field input__field--text input__field--focus"
+                                type="email"
+                                name="email"
+                                placeholder="Ваш email"
+                                required
+                            />
+                        </div>
+                        <div class="input">
+                            <input
+                                id="tel"
+                                class="input__field input__field--text input__field--focus"
+                                type="tel"
+                                name="tel"
+                                placeholder="+7 (000) 000-00-00*"
+                                required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn--red modal__btn--call"
+                        >
+                            Отправить заявку
+                        </button>
+                    </form>
+                </div>
+                <div class="modal__policy">
+                    <p>
+                        Нажимая кнопку “Отправить заявку”, вы даете согласие на
+                        обработку персональных данных и соглашаетесь с политикой
+                        конфиденциальности.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL END -->
 
         <!-- MODAL: Заказать звонок -->
         <div class="modal order-modal-call" data-modal="order-call">

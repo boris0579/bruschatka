@@ -231,35 +231,6 @@
         background-color: #f5f5f5;
     }
 
-    &__quantity {
-        position: relative;
-        //max-width: 9.375rem; // 150px
-    }
-
-    &__unit {
-        background-color: #f5f5f5;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0.9375rem; // 15px
-        display: flex;
-        align-items: center;
-        font-weight: 600;
-        font-size: 1.125rem; // 18px
-        line-height: 1.5625rem; // 25px
-
-        &::before {
-            content: "";
-            width: 1px;
-            height: 2.375rem; // 38px
-            background: url("../assets/icons/vertical-divider.svg") no-repeat
-                center center;
-            background-size: contain;
-            padding: 0 0.9375rem; // 15px
-            flex-shrink: 0;
-        }
-    }
-
     &__badge {
         position: absolute;
         top: 2rem; // 32px

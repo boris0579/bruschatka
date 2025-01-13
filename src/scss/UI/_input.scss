@@ -57,4 +57,32 @@
             color: #6d6d6d;
         }
     }
+
+    &--quantity {
+        position: relative;
+    }
+
+    &__unit {
+        background-color: inherit;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.9375rem; // 15px
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.125rem; // 18px
+        line-height: 1.5625rem; // 25px
+
+        &::before {
+            content: "";
+            width: 1px;
+            height: 2.375rem; // 38px
+            background: url("../assets/icons/vertical-divider.svg") no-repeat
+                center center;
+            background-size: contain;
+            padding: 0 0.9375rem; // 15px
+            flex-shrink: 0;
+        }
+    }
 }
