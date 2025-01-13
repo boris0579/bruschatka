@@ -636,7 +636,10 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button
+                                    class="btn btn--red card__btn"
+                                    data-modal-target="buy-click"
+                                >
                                     Купить в 1 клик
                                 </button>
                                 <a
@@ -752,7 +755,10 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button
+                                    class="btn btn--red card__btn"
+                                    data-modal-target="buy-click"
+                                >
                                     Купить в 1 клик
                                 </button>
                                 <a
@@ -868,7 +874,10 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button
+                                    class="btn btn--red card__btn"
+                                    data-modal-target="buy-click"
+                                >
                                     Купить в 1 клик
                                 </button>
                                 <a
@@ -984,7 +993,10 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button
+                                    class="btn btn--red card__btn"
+                                    data-modal-target="buy-click"
+                                >
                                     Купить в 1 клик
                                 </button>
                                 <a
@@ -1100,7 +1112,10 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button
+                                    class="btn btn--red card__btn"
+                                    data-modal-target="buy-click"
+                                >
                                     Купить в 1 клик
                                 </button>
                                 <a
@@ -1216,7 +1231,10 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button
+                                    class="btn btn--red card__btn"
+                                    data-modal-target="buy-click"
+                                >
                                     Купить в 1 клик
                                 </button>
                                 <a
@@ -1630,9 +1648,77 @@
         </div>
         <!-- MODAL END -->
 
-        <!-- MODAL: Заказать звонок -->
-        <div class="modal order-modal-call" data-modal="order-call">
-            <div class="modal__content">
+        <!-- MODAL: Оформление заказа -->
+        <div class="modal modal--buy" data-modal="buy-click">
+            <div class="modal__wrapper">
+                <div class="modal__header">
+                    <div class="modal__image-container">
+                        <span class="badge badge--hit modal__badge">Хит</span>
+                        <img
+                            src="assets/images/1.jpg"
+                            alt="Брусчатка из сланца квадрат"
+                            class="modal__image"
+                        />
+                    </div>
+                    <div class="modal__details">
+                        <h2 class="modal__product-title">
+                            Брусчатка из сланца квадрат
+                        </h2>
+                        <div class="modal__options">
+                            <div class="modal__option">
+                                <label class="modal__label">Толщина</label>
+                                <div class="select" data-select>
+                                    <button
+                                        class="select__trigger modal__select"
+                                        data-trigger-selected
+                                        data-value="30-39 мм"
+                                    >
+                                        30-39 мм
+                                    </button>
+                                    <div class="select__dropdown">
+                                        <ul
+                                            class="select__options"
+                                            data-select-options
+                                        >
+                                            <li
+                                                class="select__option"
+                                                data-value="30-39"
+                                                data-select-option
+                                            >
+                                                30-39 мм
+                                            </li>
+                                            <li
+                                                class="select__option"
+                                                data-value="40-49"
+                                                data-select-option
+                                            >
+                                                40-49 мм
+                                            </li>
+                                            <li
+                                                class="select__option"
+                                                data-value="50-59"
+                                                data-select-option
+                                            >
+                                                50-59 мм
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__option">
+                                <label class="modal__label">Количество</label>
+                                <div class="input input--quantity">
+                                    <input
+                                        class="input__field input__field--number input__field--qty modal__qty"
+                                        type="number"
+                                        value="5"
+                                    />
+                                    <span class="input__unit">м2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="modal__main-content">
                     <button
                         class="modal__close"
@@ -1640,7 +1726,7 @@
                         data-close-button
                         aria-label="Закрыть окно"
                     ></button>
-                    <h3 class="modal__title">Заказать звонок</h3>
+                    <h3 class="modal__title">Оформление заказа</h3>
                     <form class="modal__form" action="#" method="post">
                         <div class="input">
                             <input
@@ -1672,17 +1758,25 @@
                                 required
                             />
                         </div>
-                        <button
-                            type="submit"
-                            class="btn btn--red order-modal-call__btn"
-                        >
-                            Отправить заявку
-                        </button>
+                        <div class="modal__amount-summary">
+                            <div class="modal__amount">
+                                <span class="modal__amount-label">Сумма:</span>
+                                <span class="modal__amount-value"
+                                    >56 000 ₽</span
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn--red modal__btn--buy"
+                            >
+                                Заказать
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div class="modal__policy">
                     <p>
-                        Нажимая кнопку “Отправить заявку”, вы даете согласие на
+                        Нажимая кнопку “Заказать”, вы даете согласие на
                         обработку персональных данных и соглашаетесь с политикой
                         конфиденциальности.
                     </p>
