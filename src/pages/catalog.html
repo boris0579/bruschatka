@@ -384,185 +384,225 @@
                         <span class="btn__icon btn__icon--filter"></span>
                         Открыть фильтры
                     </button>
-                    <!-- FILTER START -->
-                    <section class="filter" data-filter-block>
-                        <form class="filter__form" action="#">
-                            <div class="filter__group" data-dropdown-id>
-                                <label class="filter__title">
-                                    Цена
-                                    <button
-                                        type="button"
-                                        class="dropdown-arrow opened"
-                                        data-dropdown-arrow
-                                    ></button>
-                                </label>
-                                <div
-                                    class="filter__range dropdown-nenu opened"
-                                    data-dropdown-menu
-                                >
-                                    <div class="filter__label">
-                                        <div class="input filter__input">
-                                            <span>От</span>
-                                            <input
-                                                class="input__field input__field--number input__field--focus filter__input-field"
-                                                type="number"
-                                                value="0"
-                                            />
+                    <section class="left-bar">
+                        <!-- FILTER START -->
+                        <div class="filter" data-filter-block>
+                            <form class="filter__form" action="#">
+                                <div class="filter__group" data-dropdown-id>
+                                    <label class="filter__title">
+                                        Цена
+                                        <button
+                                            type="button"
+                                            class="dropdown-arrow opened"
+                                            data-dropdown-arrow
+                                        ></button>
+                                    </label>
+                                    <div
+                                        class="filter__range dropdown-nenu opened"
+                                        data-dropdown-menu
+                                    >
+                                        <div class="filter__label">
+                                            <div class="input filter__input">
+                                                <span>От</span>
+                                                <input
+                                                    class="input__field input__field--number input__field--focus filter__input-field"
+                                                    type="number"
+                                                    value="0"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="filter__label">
-                                        <div class="input filter__input">
-                                            <span>До</span>
-                                            <input
-                                                class="input__field input__field--number input__field--focus filter__input-field"
-                                                type="number"
-                                                value="10000"
-                                            />
+                                        <div class="filter__label">
+                                            <div class="input filter__input">
+                                                <span>До</span>
+                                                <input
+                                                    class="input__field input__field--number input__field--focus filter__input-field"
+                                                    type="number"
+                                                    value="10000"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="filter__group" data-dropdown-id>
-                                <label class="filter__title"
-                                    >Цвет
-                                    <button
-                                        type="button"
-                                        class="dropdown-arrow opened"
-                                        data-dropdown-arrow
-                                    ></button>
-                                </label>
-                                <ul
-                                    class="filter__list dropdown-nenu opened"
-                                    data-dropdown-menu
+                                <div class="filter__group" data-dropdown-id>
+                                    <label class="filter__title"
+                                        >Цвет
+                                        <button
+                                            type="button"
+                                            class="dropdown-arrow opened"
+                                            data-dropdown-arrow
+                                        ></button>
+                                    </label>
+                                    <ul
+                                        class="filter__list dropdown-nenu opened"
+                                        data-dropdown-menu
+                                    >
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="filter__color"
+                                                    style="
+                                                        background-color: #ffeabc;
+                                                    "
+                                                ></span>
+                                                Бежевый
+                                            </label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="filter__color"
+                                                    style="
+                                                        background-color: #fff;
+                                                    "
+                                                ></span>
+                                                Белый
+                                            </label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="filter__color"
+                                                    style="
+                                                        background-color: red;
+                                                    "
+                                                ></span>
+                                                Красный
+                                            </label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="filter__color"
+                                                    style="
+                                                        background-color: #bb0000;
+                                                    "
+                                                ></span>
+                                                Бордовый
+                                            </label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                    checked="checked"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="filter__color"
+                                                    style="
+                                                        background-color: #000;
+                                                    "
+                                                ></span>
+                                                Черный
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter__group">
+                                    <div class="filter__divider"></div>
+
+                                    <ul class="filter__list">
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="badge badge--hit filter__badge"
+                                                    >Хит</span
+                                                >
+                                            </label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <label
+                                                class="checkbox filter__checkbox"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    class="checkbox__input"
+                                                />
+                                                <span
+                                                    class="checkbox__box"
+                                                ></span>
+                                                <span
+                                                    class="badge badge--sample filter__badge"
+                                                    >Образец</span
+                                                >
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- FILTER END-->
+                        <!-- PROMO BLOCK START -->
+                        <div class="promo-block">
+                            <div class="promo-block__content">
+                                <span class="badge promo-block__badge"
+                                    >Сервис</span
                                 >
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="filter__color"
-                                                style="
-                                                    background-color: #ffeabc;
-                                                "
-                                            ></span>
-                                            Бежевый
-                                        </label>
-                                    </li>
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="filter__color"
-                                                style="background-color: #fff"
-                                            ></span>
-                                            Белый
-                                        </label>
-                                    </li>
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="filter__color"
-                                                style="background-color: red"
-                                            ></span>
-                                            Красный
-                                        </label>
-                                    </li>
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="filter__color"
-                                                style="
-                                                    background-color: #bb0000;
-                                                "
-                                            ></span>
-                                            Бордовый
-                                        </label>
-                                    </li>
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                                checked="checked"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="filter__color"
-                                                style="background-color: #000"
-                                            ></span>
-                                            Черный
-                                        </label>
-                                    </li>
-                                </ul>
+                                <p class="promo-block__text">
+                                    Осуществляем доставку в любой регион России
+                                </p>
+                                <button
+                                    class="btn btn--outline-main promo-block__button"
+                                    data-modal-target="call"
+                                >
+                                    Заказать звонок
+                                </button>
                             </div>
-
-                            <div class="filter__group">
-                                <div class="filter__divider"></div>
-
-                                <ul class="filter__list">
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="badge badge--hit filter__badge"
-                                                >Хит</span
-                                            >
-                                        </label>
-                                    </li>
-                                    <li class="filter__item">
-                                        <label
-                                            class="checkbox filter__checkbox"
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                class="checkbox__input"
-                                            />
-                                            <span class="checkbox__box"></span>
-                                            <span
-                                                class="badge badge--sample filter__badge"
-                                                >Образец</span
-                                            >
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
+                        </div>
+                        <!-- PROMO BLOCK END -->
                     </section>
-                    <!-- FILTER END-->
                     <section class="card-list">
                         <!-- CARD START -->
                         <article class="card">
