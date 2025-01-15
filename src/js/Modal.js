@@ -44,7 +44,7 @@ class Modal {
     open (modalId) {
         const modal = document.querySelector(`[data-modal="${modalId}"]`)
         if (modal) {
-            this.overlay.classList.add('active') // Добавляем класс active для overlay
+            this.overlay.classList.add('active-modal') // Добавляем класс active-modal для overlay
             this.overlay.style.zIndex = '1000' // Устанавливаем z-index для overlay
             modal.style.zIndex = '1010' // z-index модального окна выше overlay
             modal.style.display = 'block' // Показываем модальное окно
@@ -61,7 +61,7 @@ class Modal {
             modal.style.display = 'none' // Прячем модальное окно
             modal.style.zIndex = '' // Сбрасываем z-index модального окна
         }
-        this.overlay.classList.remove('active') // Убираем класс active для overlay
+        this.overlay.classList.remove('active-modal') // Убираем класс active-modal для overlay
         this.overlay.style.zIndex = '' // Сбрасываем z-index overlay
         document.body.classList.remove('no-scroll') // Включаем скролл
     }
@@ -73,7 +73,7 @@ class Modal {
     init () {
         // Скрываем все модальные окна при загрузке страницы
         this.modals.forEach(modal => (modal.style.display = 'none'))
-        this.overlay.classList.remove('active')
+        this.overlay.classList.remove('active-modal')
         this.overlay.style.zIndex = '' // Сбрасываем z-index при инициализации
 
         // Добавляем обработчики событий для кнопок открытия модальных окон

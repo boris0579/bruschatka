@@ -9,6 +9,7 @@ import Select from './Select'
 import ColorPicker from './ColorPicker'
 import Tabs from './Tabs'
 import Modal from './Modal'
+import CatalogSidebar from './CatalogSidebar'
 
 document.addEventListener('DOMContentLoaded', () => {
     // Инициализация всех dropdown'ов на странице
@@ -71,4 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modals
     new Modal()
+
+    // Catalog sidebar
+    new CatalogSidebar('[data-catalog-sidebar]', '[data-toggle-sidebar]')
 })

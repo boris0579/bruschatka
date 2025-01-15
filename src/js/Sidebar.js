@@ -67,7 +67,7 @@ class Sidebar {
         document.body.classList.add('no-scroll')
 
         // Показываем наложение
-        this.overlay.classList.add('active')
+        this.overlay.classList.add('active-sidebar')
     }
 
     /**
@@ -84,7 +84,7 @@ class Sidebar {
         document.body.classList.remove('no-scroll')
 
         // Скрываем наложение
-        this.overlay.classList.remove('active')
+        this.overlay.classList.remove('active-sidebar')
     }
 
     /**

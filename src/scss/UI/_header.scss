@@ -148,7 +148,8 @@
         }
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 64rem) {
+        // 1024px
         &__catalog-btn {
             display: none;
         }

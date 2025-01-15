@@ -30,6 +30,8 @@
 @use "UI/modal";
 @use "UI/banner";
 @use "UI/promo-block";
+@use "UI/bottom-fixed-panel";
+@use "UI/catalog-sidebar";
 // @use "UI/scrollbar";
 
 // Pages
@@ -69,8 +71,10 @@ body {
 
 .no-wrap {
     white-space: nowrap;
-    overflow: hidden; /* Обрезать текст, если он не помещается */
-    text-overflow: ellipsis; /* Добавить многоточие (...) в конце */
+    overflow: hidden;
+    /* Обрезать текст, если он не помещается */
+    text-overflow: ellipsis;
+    /* Добавить многоточие (...) в конце */
 }
 
 .active {
@@ -95,7 +99,10 @@ body {
     z-index: 9;
     display: none;
     animation: fadeIn 0.3s ease-out;
-    &.active {
+
+    &.active-sidebar,
+    &.active-catalog,
+    &.active-modal {
         display: flex;
     }
 }
