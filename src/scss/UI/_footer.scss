@@ -5,6 +5,11 @@
     color: #fff;
     padding: 1.875rem 0 3rem; // 30px 0 48px
 
+    @media (max-width: 64rem) {
+        // 1024px
+        padding-bottom: 4.0625rem; // 65px
+    }
+
     &__container {
         display: grid;
         grid-template-columns: auto 1fr auto;
