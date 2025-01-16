@@ -26,10 +26,10 @@
 
             <!-- Кнопка Каталог -->
             <div class="header__catalog">
-                <a href="catalog.html" class="btn btn--menu header__catalog-btn">
-                    <span class="btn__icon btn__icon--menu"></span>
+                <button class="btn btn--menu header__catalog-btn" data-toggle-menu data-panel-position>
+                    <span class="btn__icon btn__icon--menu" data-icon-menu></span>
                     <span class="btn__text">Каталог</span>
-                </a>
+                </button>
             </div>
 
             <!-- Навигация и контакты -->
@@ -91,7 +91,7 @@
                                 </a>
 
                                 <button type="button" class="btn btn--main btn--call header__btn-call"
-                                    title="Открыть форму для заказа звонка" data-modal-target="order-call">
+                                    title="Открыть форму для заказа звонка" data-modal-target="call">
                                     <span class="btn__icon btn__icon--call"></span>
                                     <span class="btn__text btn__text--call">Заказать звонок</span>
                                 </button>
@@ -109,6 +109,13 @@
             <div class="sidebar" data-panel="closed">
                 <nav class="sidebar__menu">
                     <ul class="sidebar__menu-left">
+                        <a href="#" class="sidebar__menu-item" title="Гранит">Гранит</a>
+                        <a href="#" class="sidebar__menu-item" title="Лемезит">Лемезит</a>
+                        <a href="#" class="sidebar__menu-item" title="Златолит">Златолит</a>
+                        <a href="#" class="sidebar__menu-item" title="Сланец">Сланец</a>
+                    </ul>
+                    <span class="sidebar__divider"></span>
+                    <ul class="sidebar__menu-center">
                         <li>
                             <a href="about.html" class="sidebar__menu-item" title="Подробнее о нас">О нас</a>
                         </li>
@@ -119,9 +126,11 @@
                             <a href="contacts.html" class="sidebar__menu-item" title="Связаться с нами">Контакты</a>
                         </li>
                         <li>
-                            <a href="blog.html" class="sidebar__menu-item" title="Полезные статьи">Полезные статьи</a>
+                            <a href="blog.html" class="sidebar__menu-item" title="Полезные статьи">Полезные
+                                статьи</a>
                         </li>
                     </ul>
+                    <span class="sidebar__divider"></span>
                     <ul class="sidebar__menu-right">
                         <li>
                             <a href="#!" class="sidebar__menu-item" title="Написать нам в чат">Написать нам</a>
@@ -334,7 +343,7 @@
                     </div>
                     <!-- FILTER END-->
                     <!-- PROMO BLOCK START -->
-                    <div class="promo-block">
+                    <div class="promo-block promo-block--catalog">
                         <div class="promo-block__content">
                             <span class="badge promo-block__badge">Сервис</span>
                             <p class="promo-block__text">
@@ -428,7 +437,7 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
                                     Купить в 1 клик
                                 </button>
                                 <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
@@ -443,7 +452,7 @@
                         </footer>
                     </article>
                     <!-- CARD END -->
-                    <!-- CARD START -->
+                                         <!-- CARD START -->
                     <article class="card">
                         <aside class="card__aside" data-splide="card-slider">
                             <div class="splide">
@@ -523,7 +532,7 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
                                     Купить в 1 клик
                                 </button>
                                 <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
@@ -538,7 +547,7 @@
                         </footer>
                     </article>
                     <!-- CARD END -->
-                    <!-- CARD START -->
+                                         <!-- CARD START -->
                     <article class="card">
                         <aside class="card__aside" data-splide="card-slider">
                             <div class="splide">
@@ -618,7 +627,7 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
                                     Купить в 1 клик
                                 </button>
                                 <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
@@ -633,7 +642,7 @@
                         </footer>
                     </article>
                     <!-- CARD END -->
-                    <!-- CARD START -->
+                                         <!-- CARD START -->
                     <article class="card">
                         <aside class="card__aside" data-splide="card-slider">
                             <div class="splide">
@@ -713,7 +722,7 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
                                     Купить в 1 клик
                                 </button>
                                 <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
@@ -728,7 +737,7 @@
                         </footer>
                     </article>
                     <!-- CARD END -->
-                    <!-- CARD START -->
+                                         <!-- CARD START -->
                     <article class="card">
                         <aside class="card__aside" data-splide="card-slider">
                             <div class="splide">
@@ -808,7 +817,7 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
                                     Купить в 1 клик
                                 </button>
                                 <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
@@ -823,7 +832,7 @@
                         </footer>
                     </article>
                     <!-- CARD END -->
-                    <!-- CARD START -->
+                                         <!-- CARD START -->
                     <article class="card">
                         <aside class="card__aside" data-splide="card-slider">
                             <div class="splide">
@@ -903,7 +912,7 @@
                         </section>
                         <footer class="card__footer">
                             <nav class="card__actions">
-                                <button class="btn btn--red card__btn">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
                                     Купить в 1 клик
                                 </button>
                                 <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
@@ -918,6 +927,197 @@
                         </footer>
                     </article>
                     <!-- CARD END -->
+                                         <!-- CARD START -->
+                    <article class="card">
+                        <aside class="card__aside" data-splide="card-slider">
+                            <div class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <figure class="card__figure">
+                                                <img src="../assets/images/card.jpg"
+                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
+                                                    height="185" />
+                                            </figure>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <figure class="card__figure">
+                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
+                                                    class="card__img" width="260" height="185" />
+                                            </figure>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <figure class="card__figure">
+                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
+                                                    class="card__img" width="260" height="185" />
+                                            </figure>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                        <header class="card__header">
+                            <span class="card__info">В наличии</span>
+                            <h2 class="card__title">
+                                <a href="product.html" class="card__link"
+                                    aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                    Брусчатка из сланца квадрат
+                                    100х100х40мм</a>
+                            </h2>
+                        </header>
+                        <section class="card__body">
+                            <div class="card__price-container">
+                                <span class="card__current-price">1200 ₽
+                                </span>
+                                <!-- <span class="card__old-price">1800 ₽</span> -->
+                                <span class="card__price-desc">цена за кв.м</span>
+                            </div>
+
+                            <div class="card__color-wrapper">
+                                <span class="card__color" style="background-color: #6d6d6d"></span>
+                                Серый
+                            </div>
+
+                            <dl class="features">
+                                <div class="features__item">
+                                    <dt class="features__name">Толщина</dt>
+                                    <dd class="features__value">40 мм</dd>
+                                </div>
+                                <div class="features__item">
+                                    <dt class="features__name">
+                                        Плотность
+                                    </dt>
+                                    <dd class="features__value">
+                                        2,71 г/см3
+                                    </dd>
+                                </div>
+                                <div class="features__item">
+                                    <dt class="features__name">
+                                        На поддоне
+                                    </dt>
+                                    <dd class="features__value">Пусто</dd>
+                                </div>
+                                <div class="features__item">
+                                    <dt class="features__name">
+                                        Вес поддона
+                                    </dt>
+                                    <dd class="features__value">300 кг</dd>
+                                </div>
+                            </dl>
+                        </section>
+                        <footer class="card__footer">
+                            <nav class="card__actions">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
+                                    Купить в 1 клик
+                                </button>
+                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
+                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                    <span class="btn__icon btn__icon--wa"></span>
+                                    <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                        WhatsApp</span>
+                                </a>
+                            </nav>
+                            <div class="card__sku">Артикул: С482921</div>
+                        </footer>
+                    </article>
+                    <!-- CARD END -->
+                                         <!-- CARD START -->
+                    <article class="card">
+                        <aside class="card__aside" data-splide="card-slider">
+                            <div class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <figure class="card__figure">
+                                                <img src="../assets/images/card.jpg"
+                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
+                                                    height="185" />
+                                            </figure>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <figure class="card__figure">
+                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
+                                                    class="card__img" width="260" height="185" />
+                                            </figure>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <figure class="card__figure">
+                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
+                                                    class="card__img" width="260" height="185" />
+                                            </figure>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                        <header class="card__header">
+                            <span class="card__info">В наличии</span>
+                            <h2 class="card__title">
+                                <a href="product.html" class="card__link"
+                                    aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                    Брусчатка из сланца квадрат
+                                    100х100х40мм</a>
+                            </h2>
+                        </header>
+                        <section class="card__body">
+                            <div class="card__price-container">
+                                <span class="card__current-price">1200 ₽
+                                </span>
+                                <!-- <span class="card__old-price">1800 ₽</span> -->
+                                <span class="card__price-desc">цена за кв.м</span>
+                            </div>
+
+                            <div class="card__color-wrapper">
+                                <span class="card__color" style="background-color: #6d6d6d"></span>
+                                Серый
+                            </div>
+
+                            <dl class="features">
+                                <div class="features__item">
+                                    <dt class="features__name">Толщина</dt>
+                                    <dd class="features__value">40 мм</dd>
+                                </div>
+                                <div class="features__item">
+                                    <dt class="features__name">
+                                        Плотность
+                                    </dt>
+                                    <dd class="features__value">
+                                        2,71 г/см3
+                                    </dd>
+                                </div>
+                                <div class="features__item">
+                                    <dt class="features__name">
+                                        На поддоне
+                                    </dt>
+                                    <dd class="features__value">Пусто</dd>
+                                </div>
+                                <div class="features__item">
+                                    <dt class="features__name">
+                                        Вес поддона
+                                    </dt>
+                                    <dd class="features__value">300 кг</dd>
+                                </div>
+                            </dl>
+                        </section>
+                        <footer class="card__footer">
+                            <nav class="card__actions">
+                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
+                                    Купить в 1 клик
+                                </button>
+                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
+                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                    <span class="btn__icon btn__icon--wa"></span>
+                                    <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                        WhatsApp</span>
+                                </a>
+                            </nav>
+                            <div class="card__sku">Артикул: С482921</div>
+                        </footer>
+                    </article>
+                    <!-- CARD END -->
+
                     <button class="btn btn--outline-main card__btn-show">
                         Показать ещё
                         <span class="btn__icon btn__icon--main" aria-hidden="true"></span>
@@ -1023,7 +1223,7 @@
             <div class="footer__column footer__column--right">
                 <div class="footer__cta">
                     <button type="button" class="btn btn--main" aria-label="Открыть форму для заказа звонка"
-                        title="Заказать звонок" data-modal-target="order-call">
+                        title="Заказать звонок" data-modal-target="call">
                         Заказать звонок
                     </button>
                     <a href="https://yandex.ru/maps" class="footer__map-link" target="_blank" rel="noopener noreferrer"
@@ -1225,8 +1425,8 @@
                             <span class="categories__title">Лемезит</span>
                         </div>
                         <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Златолит" width="161"
-                                height="123" />
+                            <img class="categories__image" src="../assets/images/category.jpg" alt="Златолит"
+                                width="161" height="123" />
                             <span class="categories__title">Златолит</span>
                         </div>
                         <div class="categories__item">
@@ -1235,8 +1435,8 @@
                             <span class="categories__title">Сланец</span>
                         </div>
                         <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Песчаник" width="161"
-                                height="123" />
+                            <img class="categories__image" src="../assets/images/category.jpg" alt="Песчаник"
+                                width="161" height="123" />
                             <span class="categories__title">Песчаник</span>
                         </div>
                         <div class="categories__item">

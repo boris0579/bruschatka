@@ -10,6 +10,7 @@ import ColorPicker from './ColorPicker'
 import Tabs from './Tabs'
 import Modal from './Modal'
 import CatalogSidebar from './CatalogSidebar'
+import HeaderDropdownMenu from './HeaderDropdownMenu'
 
 document.addEventListener('DOMContentLoaded', () => {
     // Инициализация всех dropdown'ов на странице
@@ -29,7 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     new NavbarScrollEffect('.header')
 
     // Мобильное меню шапки
-    new Sidebar()
+    // Получаем все кнопки
+    const toggleMenu = document.querySelectorAll('[data-toggle-menu]')
+
+    // Преобразуем NodeList в массив и передаем все кнопки в один экземпляр Sidebar
+    new Sidebar(Array.from(toggleMenu))
 
     // Страница продукта
     new ProductGallery('[data-product-gallery]')
@@ -75,4 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Catalog sidebar
     new CatalogSidebar('[data-catalog-sidebar]', '[data-toggle-sidebar]')
+
+    // Menu header
+    new HeaderDropdownMenu()
 })

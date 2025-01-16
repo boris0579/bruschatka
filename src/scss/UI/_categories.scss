@@ -5,6 +5,7 @@
         // 990px
         padding-bottom: 2rem; // 32px
     }
+
     &__container {
         display: flex;
         overflow-x: auto;
@@ -16,6 +17,7 @@
         @media (max-width: 26.5625rem) {
             // 425px
             gap: 1rem; // 16px
+            margin-right: -1rem;
         }
     }
 
@@ -30,6 +32,13 @@
         overflow: hidden;
         border-radius: 0.5625rem; // 9px
         cursor: pointer;
+
+        @media (max-width: 26.5625rem) {
+            // 425px
+            &:last-child {
+                margin-right: 1rem;
+            }
+        }
     }
 
     &__item:hover &__image {

@@ -9,7 +9,9 @@ export default function initSlider () {
         gap: '10px',
         live: false,
         pagination: true,
-        arrows: false
+        arrows: false,
+        waitForTransition: true,
+        wheel: true
     })
 
     // Слайдер для отзывов

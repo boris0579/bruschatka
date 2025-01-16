@@ -1,117 +1,132 @@
 /**
  * Класс Sidebar для управления боковой панелью (меню).
- * Обрабатывает открытие, закрытие меню, а также клики вне области меню и изменение размера экрана.
  */
 class Sidebar {
     /**
      * Создает экземпляр класса Sidebar.
-     * Находит все необходимые элементы на странице и привязывает обработчики событий.
+     * @param {HTMLElement[]} toggleMenuElements - Массив элементов, которые переключают меню.
      */
-    constructor () {
-        // Находим элементы на странице
-        this.menuToggle = document.querySelector('[data-toggle-menu]') // Элемент, который переключает меню
-        this.menuIcon = this.menuToggle.querySelector('[data-icon-menu]') // Иконка меню (меню/закрыть)
-        this.sidePanel = document.querySelector('[data-panel]') // меню
+    constructor (toggleMenuElements) {
+        // Элементы, которые переключают меню
+        this.toggleMenuElements = toggleMenuElements
+        this.sidePanel = document.querySelector('[data-panel]') // Панель
         this.overlay = document.querySelector('[data-overlay]') // Наложение
+        this.activeButton = null // Текущая активная кнопка
+        this.panelPosition = null
 
-        // Привязываем обработчики событий для взаимодействия с меню
+        // Привязываем обработчики событий
         this.addEventListeners()
     }
 
     /**
      * Добавляет обработчики событий для взаимодействия с боковой панелью.
-     * - Открытие или закрытие панели при клике на иконку меню.
-     * - Закрытие панели при клике вне ее области.
-     * - Закрытие панели при изменении размера экрана (если экран больше 834px).
      */
     addEventListeners () {
-        // Открытие или закрытие панели по клику на иконку меню
-        this.menuToggle.addEventListener('click', () => this.toggleSidePanel())
+        // Открытие/закрытие панели при клике на любую из кнопок
+        this.toggleMenuElements.forEach(button => {
+            button.addEventListener('click', () => this.toggleSidePanel(button))
+        })
 
         // Закрытие панели при клике вне ее области
         document.addEventListener('click', event =>
             this.handleOutsideClick(event)
         )
 
-        // Закрытие панели при изменении размера экрана (если экран больше 834px)
+        // Закрытие панели при изменении размера экрана
         window.addEventListener('resize', () => this.handleResize())
     }
 
     /**
-     * Переключает состояние боковой панели (открытие/закрытие).
-     * Если панель открыта — закрывает ее, если закрыта — открывает.
+     * Переключает состояние боковой панели.
+     * @param {HTMLElement} button - Кнопка, на которую был клик.
      */
-    toggleSidePanel () {
-        // Проверяем, открыта ли панель
+    toggleSidePanel (button) {
+        this.panelPosition = button.hasAttribute('data-panel-position')
         const isPanelOpen = this.sidePanel.getAttribute('data-panel') === 'open'
-
-        // Если панель открыта, закрываем ее, если закрыта — открываем
         if (isPanelOpen) {
             this.closeSidePanel()
         } else {
-            this.openSidePanel()
+            this.openSidePanel(button)
         }
     }
 
     /**
-     * Открывает боковую панель, меняет иконку и добавляет наложение.
+     * Открывает боковую панель.
+     * @param {HTMLElement} button - Кнопка, открывающая панель.
      */
-    openSidePanel () {
-        // Устанавливаем атрибут, чтобы указать, что панель открыта
+    openSidePanel (button) {
+        if (this.panelPosition) {
+            const leftPosition = button.offsetLeft
+            this.sidePanel.style.left = `${leftPosition}px`
+        }
         this.sidePanel.setAttribute('data-panel', 'open')
 
-        // Для смены иконки
-        this.menuIcon.setAttribute('data-icon', 'close')
+        // Меняем иконку, если она есть
+        const menuIcon = button.querySelector('[data-icon-menu]')
+        if (menuIcon) {
+            menuIcon.setAttribute('data-icon', 'close')
+        }
 
-        // Отключаем скролл
-        document.body.classList.add('no-scroll')
+        // Устанавливаем цвет кнопки
+        button.style.backgroundColor = '#F5F5F5'
+        this.activeButton = button // Сохраняем активную кнопку
 
-        // Показываем наложение
-        this.overlay.classList.add('active-sidebar')
+        // Показываем наложение, если оно существует
+        if (this.overlay) {
+            this.overlay.classList.add('active-sidebar')
+        }
+
+        document.body.classList.add('no-scroll') // Отключаем скролл
     }
 
     /**
-     * Закрывает боковую панель, меняет иконку и скрывает наложение.
+     * Закрывает боковую панель.
      */
     closeSidePanel () {
-        // Устанавливаем атрибут, чтобы указать, что панель закрыта
         this.sidePanel.setAttribute('data-panel', 'closed')
 
-        // Для смены иконки
-        this.menuIcon.setAttribute('data-icon', 'menu')
+        // Сбрасываем цвет активной кнопки
+        if (this.activeButton) {
+            this.activeButton.style.backgroundColor = ''
 
-        // Включаем скролл
-        document.body.classList.remove('no-scroll')
+            // Меняем иконку обратно, если она есть
+            const menuIcon = this.activeButton.querySelector('[data-icon-menu]')
+            if (menuIcon) {
+                menuIcon.setAttribute('data-icon', 'menu')
+            }
+
+            this.activeButton = null // Убираем ссылку на активную кнопку
+            this.sidePanel.style.left = 0
+        }
 
         // Скрываем наложение
-        this.overlay.classList.remove('active-sidebar')
+        if (this.overlay) {
+            this.overlay.classList.remove('active-sidebar')
+        }
+
+        document.body.classList.remove('no-scroll') // Включаем скролл
     }
 
     /**
-     * Обрабатывает клик вне области боковой панели.
-     * Закрывает панель, если клик был вне нее или иконки меню.
+     * Обрабатывает клик вне панели.
      * @param {Event} event - Событие клика.
      */
     handleOutsideClick (event) {
-        // Проверяем, открыта ли панель
         const isPanelOpen = this.sidePanel.getAttribute('data-panel') === 'open'
         if (isPanelOpen) {
-            // Проверяем, был ли клик вне боковой панели и иконки меню
             const isClickInside =
-                this.sidePanel.contains(event.target) || // Клик внутри панели
-                this.menuToggle.contains(event.target) // Клик внутри иконки меню
+                this.sidePanel.contains(event.target) ||
+                this.toggleMenuElements.some(btn => btn.contains(event.target))
             if (!isClickInside) {
-                // Если клик был вне — закрываем панель
                 this.closeSidePanel()
             }
         }
     }
 
     /**
-     * Закрывает боковую панель при изменении размера окна, если ширина больше 834px.
+     * Закрывает панель при изменении размера экрана.
      */
     handleResize () {
-        // Если ширина окна больше 834px, то закрываем панель
         if (window.innerWidth > 834) {
             this.closeSidePanel()
         }
