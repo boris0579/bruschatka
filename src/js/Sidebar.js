@@ -55,6 +55,7 @@ class Sidebar {
      * @param {HTMLElement} button - Кнопка, открывающая панель.
      */
     openSidePanel (button) {
+        this.sidePanel.style.left = 0
         if (this.panelPosition) {
             const leftPosition = button.offsetLeft
             this.sidePanel.style.left = `${leftPosition}px`
@@ -96,7 +97,6 @@ class Sidebar {
             }
 
             this.activeButton = null // Убираем ссылку на активную кнопку
-            this.sidePanel.style.left = 0
         }
 
         // Скрываем наложение
