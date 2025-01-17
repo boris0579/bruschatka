@@ -13,6 +13,9 @@ import CatalogSidebar from './CatalogSidebar'
 import HeaderDropdownMenu from './HeaderDropdownMenu'
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Modals
+    new Modal()
+
     // Инициализация всех dropdown'ов на странице
     const dropdowns = document.querySelectorAll('[data-dropdown-id]')
 
@@ -74,9 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         selector: '[data-tabs]', // Селектор контейнера с табами
         activeTabIndex: 1 // Активный таб
     })
-
-    // Modals
-    new Modal()
 
     // Catalog sidebar
     new CatalogSidebar('[data-catalog-sidebar]', '[data-toggle-sidebar]')
