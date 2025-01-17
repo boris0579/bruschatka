@@ -12,7 +12,7 @@ class Sidebar {
         this.sidePanel = document.querySelector('[data-panel]') // Панель
         this.overlay = document.querySelector('[data-overlay]') // Наложение
         this.activeButton = null // Текущая активная кнопка
-        this.panelPosition = null
+        this.panelPosition = null // Проверка на атрибут data-panel-position
 
         // Привязываем обработчики событий
         this.addEventListeners()
@@ -41,7 +41,9 @@ class Sidebar {
      * @param {HTMLElement} button - Кнопка, на которую был клик.
      */
     toggleSidePanel (button) {
+        // Проверка на атрибут data-panel-position
         this.panelPosition = button.hasAttribute('data-panel-position')
+
         const isPanelOpen = this.sidePanel.getAttribute('data-panel') === 'open'
         if (isPanelOpen) {
             this.closeSidePanel()
@@ -55,11 +57,10 @@ class Sidebar {
      * @param {HTMLElement} button - Кнопка, открывающая панель.
      */
     openSidePanel (button) {
-        this.sidePanel.style.left = 0
-        if (this.panelPosition) {
-            const leftPosition = button.offsetLeft
-            this.sidePanel.style.left = `${leftPosition}px`
-        }
+        // Устанавливает позицию боковой панели относительно кнопки
+        // если у кнопки есть атрибут data-panel-position
+        this.setSidePanelPosition(button)
+
         this.sidePanel.setAttribute('data-panel', 'open')
 
         // Меняем иконку, если она есть
@@ -105,6 +106,18 @@ class Sidebar {
         }
 
         document.body.classList.remove('no-scroll') // Включаем скролл
+    }
+
+    /**
+     * Устанавливает позицию боковой панели.
+     * @param {HTMLElement} button - Кнопка, на основе которой устанавливается позиция.
+     */
+    setSidePanelPosition (button) {
+        this.sidePanel.style.left = 0
+        if (this.panelPosition) {
+            const leftPosition = button.offsetLeft
+            this.sidePanel.style.left = `${leftPosition}px`
+        }
     }
 
     /**

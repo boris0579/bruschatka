@@ -52,7 +52,7 @@
 
         @media (min-width: 64rem) {
             display: block;
-            width: 1px;
+            width: 0.0625rem; // 1px
             height: auto;
             background-color: #6d6d6d;
         }
