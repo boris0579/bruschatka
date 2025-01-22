@@ -226,6 +226,10 @@
     &__select {
         background-color: #f5f5f5;
         width: 9rem; // 144px
+        @media (max-width: 28.125rem) {
+            // 450px
+            width: max-content;
+        }
     }
 
     &__badge {
