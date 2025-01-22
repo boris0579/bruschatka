@@ -24,4 +24,11 @@
         backdrop-filter: blur(2px);
         height: max-content;
     }
+
+    &--sale {
+        background-color: #FF2020;
+        font-weight: 700;
+        font-size: 0.875rem; // 14px
+        line-height: 1.1875rem; // 19px
+    }
 }

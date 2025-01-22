@@ -1311,12 +1311,25 @@
                 <div class="modal__image-container">
                     <span class="badge badge--hit modal__badge">Хит</span>
                     <img src="../assets/images/1.jpg" alt="Брусчатка из сланца квадрат" class="modal__image" />
+                    <h2 class="modal__title-mobile">
+                        Брусчатка из сланца квадрат
+                    </h2>
                 </div>
                 <div class="modal__details">
-                    <h2 class="modal__product-title">
+                    <h2 class="modal__title-desk">
                         Брусчатка из сланца квадрат
                     </h2>
                     <div class="modal__options">
+                        <div class="modal__option">
+                            <label class="modal__label">Количество <span class="unit modal__unit">(M<sup>2</sup>)</span></label>
+                            <div class="input input--quantity" data-quantity>
+                                <span class="input__btn input__btn--minus" data-action="decrease"
+                                    aria-label="Уменьшить количество"></span>
+                                <input class="input__field input__field--quantity" type="number" value="5" data-field />
+                                <span class="input__btn input__btn--plus" data-action="increase"
+                                    aria-label="Увеличить количество"></span>
+                            </div>
+                        </div>
                         <div class="modal__option">
                             <label class="modal__label">Толщина</label>
                             <div class="select" data-select>
@@ -1339,14 +1352,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal__option">
-                            <label class="modal__label">Количество</label>
-                            <div class="input input--quantity">
-                                <input class="input__field input__field--number input__field--qty modal__qty"
-                                    type="number" value="5" />
-                                <span class="input__unit">м2</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1356,15 +1361,16 @@
                 <form class="modal__form" action="#" method="post">
                     <div class="input">
                         <input id="name" class="input__field input__field--text input__field--focus" type="text"
-                            name="name" placeholder="Ваше имя" required />
+                            name="name" placeholder="Ваше имя" />
                     </div>
                     <div class="input">
-                        <input id="email" class="input__field input__field--text input__field--focus" type="email"
-                            name="email" placeholder="Ваш email" required />
+                        <span class="input__error-message">Проверьте формат указанных данных</span>
+                        <input id="email" class="input__field input__field--text input__field--focus input__field--error" type="email"
+                            name="email" placeholder="Ваш email" value="ivanivanov%gmail.com"/>
                     </div>
                     <div class="input">
                         <input id="tel" class="input__field input__field--text input__field--focus" type="tel"
-                            name="tel" placeholder="+7 (000) 000-00-00*" required />
+                            name="tel" placeholder="+7 (000) 000-00-00*" />
                     </div>
                     <div class="modal__amount-summary">
                         <div class="modal__amount">

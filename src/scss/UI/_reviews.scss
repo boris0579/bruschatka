@@ -64,6 +64,13 @@
             // 768px
             padding: 1.5rem 1.5rem 1rem 1.5rem; // 24px 24px 16px 24px
         }
+
+        @media (max-width: 28.125rem) {
+            // 450px
+            font-size: 1rem; // 16px;
+            line-height: 1.3;
+            padding: 1rem; // 16px
+        }
     }
 
     &__footer {
@@ -79,18 +86,35 @@
             // 768px
             padding: 0 1.5rem 2rem 1.5rem; // 0 24px 32px 24px
         }
+
+        @media (max-width: 28.125rem) {
+            // 450px
+            padding: 0 1rem 1rem; // 0 16px
+        }
     }
 
     &__author {
         font-size: 1.5rem; // 24px
         line-height: 2.0625rem; // 33px
         color: $font-color;
+
+        @media (max-width: 28.125rem) {
+            // 450px
+            font-size: 1rem; // 16px;
+            line-height: 1;
+        }
     }
 
     &__location {
         font-size: 1rem; // 16px
         line-height: 1.375rem; // 22px
         color: #6d6d6d;
+
+        @media (max-width: 28.125rem) {
+            // 450px
+            font-size: 0.9rem;
+            line-height: 1;
+        }
     }
 
     .splide__pagination {
@@ -113,6 +137,7 @@
                 &:not(:last-child) {
                     margin-right: 0.5rem; // 8px
                 }
+
                 display: flex;
                 flex: 0 0 1.125rem; // 18px
 

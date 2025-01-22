@@ -61,6 +61,7 @@
     }
 
     &__button {
+        flex: 1;
         @media (max-width: 48rem) {
             width: 100%;
             margin-top: 6px;

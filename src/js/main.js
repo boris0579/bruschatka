@@ -11,10 +11,12 @@ import Tabs from './Tabs'
 import Modal from './Modal'
 import CatalogSidebar from './CatalogSidebar'
 import HeaderDropdownMenu from './HeaderDropdownMenu'
+import ButtonPreloader from './ButtonPreloader'
+import QuantityInput from './QuantityInput'
 
 document.addEventListener('DOMContentLoaded', () => {
     // Modals
-    new Modal()
+    const modal = new Modal()
 
     // Инициализация всех dropdown'ов на странице
     const dropdowns = document.querySelectorAll('[data-dropdown-id]')
@@ -25,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Инициализация слайдера
     initSlider()
+
+    // Поле number (custom)
+    new QuantityInput()
 
     // Скрыть/показать фильтр
     new FilterToggle('[data-filter-btn]', '[data-filter-block]')
@@ -83,4 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Menu header
     new HeaderDropdownMenu()
+
+    // Ищем все кнопки с data-loader="false"
+    const buttons = ButtonPreloader.getLoaderButtons()
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Добавляем прелоадер
+            ButtonPreloader.addPreloader(button, 'Загрузка...')
+
+            // Эмуляция запроса
+            setTimeout(() => {
+                // Удаляем прелоадер
+                ButtonPreloader.removePreloader(button)
+                modal.open('success') // Открываем модальное окно по значению аттрибута
+            }, 1000)
+        })
+    })
 })

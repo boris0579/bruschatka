@@ -26,24 +26,30 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: 1.25rem; /* 20px */
+        bottom: 1.25rem;
+        /* 20px */
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        height: 0.125rem; /* 2px */
+        height: 0.125rem;
+        /* 2px */
         z-index: 1;
-        padding: 0 1.5rem; /* 24px */
+        padding: 0 1.5rem;
+        /* 24px */
 
         li {
             &:not(:last-child) {
                 margin-right: 0.625rem; // 10px
             }
+
             display: flex;
-            flex: 1 0 0.125rem; /* 2px */
+            flex: 1 0 0.125rem;
+            /* 2px */
 
             button {
                 width: 100%;
-                height: 0.125rem; /* 2px */
+                height: 0.125rem;
+                /* 2px */
                 background: #744746;
                 border: none;
                 cursor: pointer;
@@ -71,6 +77,39 @@
         z-index: 2;
         background-color: #744746;
         transition: background-color 0.3s ease, transform 0.2s ease;
+
+        @media (min-width: 84.375rem) {
+            // 1350px
+            background-color: transparent;
+
+            svg {
+                display: none;
+            }
+
+            &--next,
+            &--prev {
+                &::before {
+                    content: "";
+                    width: 1.5rem;
+                    /* width: 24px */
+                    height: 3.1875rem;
+                    /* height: 51px */
+                    flex-shrink: 0;
+                }
+            }
+
+            &--next {
+                &::before {
+                    background-image: url("../assets/icons/arrow-next.svg");
+                }
+            }
+
+            &--prev {
+                &::before {
+                    background-image: url("../assets/icons/arrow-prev.svg");
+                }
+            }
+        }
 
         @media (max-width: 84.375rem) {
             // 1350px
@@ -106,6 +145,7 @@
 
         &--next {
             right: -3.875rem; // 62px
+
             @media (max-width: 84.375rem) {
                 // 1350px
                 right: 0;
