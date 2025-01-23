@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../utils/mixins" as *;
 
 .promo-block {
     background-image: url("../assets/images/promo-main.jpg");
@@ -16,15 +17,19 @@
     /* 32px */
     overflow: hidden;
     position: relative;
+    transform: translateY(0.625rem); // 10px
+    @include fade-in(0.625rem, 0.3s, ease, forwards); // Анимация появления
 
-    &--main {
+    &--main,
+    &--catalog {
         @media (max-width: 61.875rem) {
             // 990px
             display: none;
         }
     }
 
-    &--main-mobile {
+    &--main-mobile,
+    &--catalog-mobile {
         display: none;
 
         @media (max-width: 61.875rem) {
@@ -49,8 +54,10 @@
         }
     }
 
-    &--main-mobile-fixed {
+    &--main-mobile-fixed,
+    &--catalog-mobile-fixed {
         display: none;
+
         @media (max-width: 28.125rem) {
             // 450px
             display: block;
@@ -59,9 +66,17 @@
             left: 0;
             bottom: 4.75rem;
             margin: 0;
-            max-height: 16.25rem; // 260px
-            z-index: 10;
+            max-height: max-content;
+            z-index: 8;
         }
+    }
+
+    &--main-mobile-fixed &__content {
+        height: auto
+    }
+
+    &--hide {
+        @include fade-out(0.625rem, 0.3s, ease, forwards);
     }
 
     &__btn-close {

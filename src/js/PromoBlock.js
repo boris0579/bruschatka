@@ -32,7 +32,7 @@ export default class PromoBlock {
          * Класс, который добавляется для скрытия блока.
          * @type {string}
          */
-        this.hiddenClass = 'hidden'
+        this.hiddenClass = 'promo-block--hide'
 
         this.init()
     }
