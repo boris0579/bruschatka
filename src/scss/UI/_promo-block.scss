@@ -17,10 +17,58 @@
     overflow: hidden;
     position: relative;
 
-    @media (max-width: 61.875rem) {
-        // 990px
-        //order: -1;
+    &--main {
+        @media (max-width: 61.875rem) {
+            // 990px
+            display: none;
+        }
+    }
+
+    &--main-mobile {
         display: none;
+
+        @media (max-width: 61.875rem) {
+            // 990px
+            display: block;
+            margin: 0 1rem;
+            width: auto;
+            margin-top: 3rem; // 48px
+            padding: 2rem;
+            max-height: 20.4375rem; // 327px
+        }
+    }
+
+    &--main-mobile &__content {
+        justify-content: space-between;
+    }
+
+    &--main-mobile &__btn {
+        @media (max-width: 48rem) {
+            // 768px
+            width: 100%;
+        }
+    }
+
+    &--main-mobile-fixed {
+        display: none;
+        @media (max-width: 28.125rem) {
+            // 450px
+            display: block;
+            position: fixed;
+            right: 0;
+            left: 0;
+            bottom: 4.75rem;
+            margin: 0;
+            max-height: 16.25rem; // 260px
+            z-index: 10;
+        }
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 1rem; // 16px
+        right: 1rem; // 16px
+        background-image: url('../assets/icons/promo-close.svg');
     }
 
     &::before {

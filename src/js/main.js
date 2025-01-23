@@ -14,10 +14,18 @@ import HeaderDropdownMenu from './HeaderDropdownMenu'
 import ButtonPreloader from './ButtonPreloader'
 import QuantityInput from './QuantityInput'
 import NotificationManager from './NotificationManager'
+import { setupCardLinks } from './utils/card'
+import PromoBlock from './PromoBlock'
 
 document.addEventListener('DOMContentLoaded', () => {
     // Modals
     const modal = new Modal()
+
+    // Для карточки товара
+    setupCardLinks()
+
+    // Промо блоки рекламные (используется '[data-promo]')
+    new PromoBlock()
 
     // Инициализация всех dropdown'ов на странице
     const dropdowns = document.querySelectorAll('[data-dropdown-id]')
