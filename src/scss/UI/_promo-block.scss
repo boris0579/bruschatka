@@ -19,7 +19,8 @@
 
     @media (max-width: 61.875rem) {
         // 990px
-        order: -1;
+        //order: -1;
+        display: none;
     }
 
     &::before {
