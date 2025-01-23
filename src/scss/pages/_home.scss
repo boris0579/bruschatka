@@ -1,0 +1,7 @@
+.left-bar {
+    @media (max-width: 61.875rem) {
+        // 990px
+        display: flex;
+        flex-direction: column;
+    }
+}
