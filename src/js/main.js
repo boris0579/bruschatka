@@ -13,6 +13,7 @@ import CatalogSidebar from './CatalogSidebar'
 import HeaderDropdownMenu from './HeaderDropdownMenu'
 import ButtonPreloader from './ButtonPreloader'
 import QuantityInput from './QuantityInput'
+import NotificationManager from './NotificationManager'
 
 document.addEventListener('DOMContentLoaded', () => {
     // Modals
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu header
     new HeaderDropdownMenu()
 
-    // Ищем все кнопки с data-loader="false"
+    // Кнопки с data-loader="false" (прелоадер)
     const buttons = ButtonPreloader.getLoaderButtons()
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -100,8 +101,70 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 // Удаляем прелоадер
                 ButtonPreloader.removePreloader(button)
-                modal.open('success') // Открываем модальное окно по значению аттрибута
+                modal.open('success') // Открываем модальное окно по значению атрибута
             }, 1000)
         })
+    })
+
+    /** ПРОСТО ДЛЯ ДЕМОНСТРАЦИИ  */
+    // Найти все элементы с атрибутом data-notification
+    const notificationElements = document.querySelectorAll(
+        '[data-notification]'
+    )
+
+    notificationElements.forEach(element => {
+        const notificationType = element.dataset.notification // Получаем тип уведомления
+
+        // Создаем экземпляр NotificationManager
+        const notificationManager = new NotificationManager(element)
+
+        // Добавляем контент уведомления в зависимости от значения атрибута
+        switch (notificationType) {
+            case 'request-info':
+                notificationManager.show({
+                    content: `
+                    <h3 class="notification__title">Ваша заявка отправлена!</h3>
+                    <p class="notification__text">Мы свяжемся с вами в ближайшее время по номеру:<br>
+                        <span>+7 (903) 111-11-11</span>
+                    </p>
+                `,
+                    type: 'request-info'
+                })
+                break
+
+            case 'order-info':
+                notificationManager.show({
+                    content: `
+                    <h3 class="notification__title">Александр, ваш заказ принят!</h3>
+                    <p class="notification__text notification__text--details">
+                        Ваш заказ: Брусчатка из сланца квадрат, 5 м2, 30-39 мм
+                    </p>
+                    <p class="notification__text notification__text--summary">Сумма: 56 000 ₽</p>
+                    <p class="notification__text notification__text--info">Мы свяжемся с вами в самое ближайшее время!</p>
+                `,
+                    image: 'assets/1.jpg',
+                    type: 'order-info'
+                })
+                break
+
+            case 'product-info':
+                notificationManager.show({
+                    content: `
+                        <h3 class="notification__title">На этот товар высокий спрос!</h3>
+                        <p class="notification__text notification__text--details">
+                            Сегодня было заказано 50м2 этого
+                            товара (Брусчатка из сланца
+                            квадрат)
+                        </p>
+                        <p class="notification__text notification__text--info">В наличии осталось: 10 штук</p>
+                    `,
+                    image: '../assets/1.jpg',
+                    type: 'product-info'
+                })
+                break
+
+            default:
+                break
+        }
     })
 })

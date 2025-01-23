@@ -198,3 +198,13 @@
         }
     }
 }
+
+.btn-close {
+    background-image: url('../assets/icons/close-modal.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 0.9375rem; // 15px
+    height: 0.9375rem; // 15px
+    display: block;
+}

@@ -23,7 +23,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            padding: 0.75rem 2.25rem; // 12px 36px
+            padding: 0.75rem 2rem; // 12px 32px
             background-color: transparent;
             border: 0.0625rem solid #6d6d6d; // 1px
             border-radius: 0.5rem; // 8px
@@ -90,15 +90,16 @@
         align-items: center;
 
         &--minus {
-            width: 0.9375rem; // 15px
+            width: 1.6875rem; // 27px
             height: 100%;
-            left: 0.75rem; // 12px
+            left: 0;
+            justify-content: flex-end;
         }
 
         &--plus {
-            width: 0.9375rem; // 15px
+            width: 1.6875rem; // 27px
             height: 100%;
-            right: 0.75rem; // 12px
+            right: 0;
         }
 
         &::before {

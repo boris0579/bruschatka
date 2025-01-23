@@ -131,18 +131,10 @@
         padding-top: 1.5rem; // 24px
     }
 
-    &__close {
+    &__btn-close {
         position: absolute;
         top: 1rem; // 16px
         right: 1rem; // 16px
-        cursor: pointer;
-        z-index: 1;
-        background-image: url('../assets/icons/close-modal.svg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center;
-        width: 0.9375rem; // 15px
-        height: 0.9375rem; // 15px
     }
 
     &__amount-summary {

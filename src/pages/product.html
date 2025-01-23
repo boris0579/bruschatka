@@ -262,11 +262,18 @@
                 </div>
 
                 <div class="product__details">
-                    <h3 class="product__title">Оформление заказа</h3>
+                    <div class="product__header">
+                        <h3 class="product__title">Оформление заказа</h3>
+                        <div class="product__right-header">
+                            <span class="product__designer-info">Вы дизайнер?</span>
+                            <button class="product__conditions-btn" data-modal-target="terms">Получить условия</button>
+                        </div>
+                    </div>
                     <div class="product__content">
                         <div class="product__options">
                             <div class="product__option">
-                                <label class="product__label">Количество <span class="unit product__unit">(M<sup>2</sup>)</span></label>
+                                <label class="product__label">Количество <span
+                                        class="unit product__unit">(M<sup>2</sup>)</span></label>
                                 <div class="input input--quantity" data-quantity>
                                     <span class="input__btn input__btn--minus" data-action="decrease"
                                         aria-label="Уменьшить количество"></span>
@@ -755,20 +762,21 @@
     <div class="modal modal--call" data-modal="call">
         <div class="modal__wrapper">
             <div class="modal__main-content">
-                <button class="modal__close" title="Закрыть" data-close-button aria-label="Закрыть окно"></button>
+                <button class="btn-close modal__btn-close" title="Закрыть" aria-label="Закрыть окно"
+                    data-close-button></button>
                 <h3 class="modal__title">Заказать звонок</h3>
                 <form class="modal__form" action="#" method="post">
                     <div class="input">
-                        <input id="name" class="input__field input__field--text input__field--focus" type="text"
-                            name="name" placeholder="Ваше имя" required />
+                        <input id="name" class="input__field  input__field--focus" type="text" name="name"
+                            placeholder="Ваше имя" />
                     </div>
                     <div class="input">
-                        <input id="email" class="input__field input__field--text input__field--focus" type="email"
-                            name="email" placeholder="Ваш email" required />
+                        <input id="email" class="input__field  input__field--focus" type="email" name="email"
+                            placeholder="Ваш email" />
                     </div>
                     <div class="input">
-                        <input id="tel" class="input__field input__field--text input__field--focus" type="tel"
-                            name="tel" placeholder="+7 (000) 000-00-00*" required />
+                        <input id="tel" class="input__field  input__field--focus" type="tel" name="tel"
+                            placeholder="+7 (000) 000-00-00*" />
                     </div>
                     <button type="submit" class="btn btn--red modal__btn--call">
                         Отправить заявку
@@ -782,99 +790,53 @@
                     конфиденциальности.
                 </p>
             </div>
+            <!-- NOTIFY REQUEST INFO-->
+            <div class="notification-container" data-notification="request-info"></div>
         </div>
     </div>
     <!-- MODAL END -->
 
-    <!-- MODAL: Оформление заказа -->
-    <div class="modal modal--buy" data-modal="buy-click">
+    <!-- MODAL: Получить условия -->
+    <div class="modal modal--terms" data-modal="terms">
         <div class="modal__wrapper">
-            <div class="modal__header">
-                <div class="modal__image-container">
-                    <span class="badge badge--hit modal__badge">Хит</span>
-                    <img src="../assets/images/1.jpg" alt="Брусчатка из сланца квадрат" class="modal__image" />
-                    <h2 class="modal__title-mobile">
-                        Брусчатка из сланца квадрат
-                    </h2>
-                </div>
-                <div class="modal__details">
-                    <h2 class="modal__title-desk">
-                        Брусчатка из сланца квадрат
-                    </h2>
-                    <div class="modal__options">
-                        <div class="modal__option">
-                            <label class="modal__label">Количество <span class="unit modal__unit">(M<sup>2</sup>)</span></label>
-                            <div class="input input--quantity" data-quantity>
-                                <span class="input__btn input__btn--minus" data-action="decrease"
-                                    aria-label="Уменьшить количество"></span>
-                                <input class="input__field input__field--quantity" type="number" value="5" data-field />
-                                <span class="input__btn input__btn--plus" data-action="increase"
-                                    aria-label="Увеличить количество"></span>
-                            </div>
-                        </div>
-                        <div class="modal__option">
-                            <label class="modal__label">Толщина</label>
-                            <div class="select" data-select>
-                                <button class="select__trigger modal__select" data-trigger-selected
-                                    data-value="30-39 мм">
-                                    30-39 мм
-                                </button>
-                                <div class="select__dropdown">
-                                    <ul class="select__options" data-select-options>
-                                        <li class="select__option" data-value="30-39" data-select-option>
-                                            30-39 мм
-                                        </li>
-                                        <li class="select__option" data-value="40-49" data-select-option>
-                                            40-49 мм
-                                        </li>
-                                        <li class="select__option" data-value="50-59" data-select-option>
-                                            50-59 мм
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="modal__main-content">
-                <button class="modal__close" title="Закрыть" data-close-button aria-label="Закрыть окно"></button>
-                <h3 class="modal__title">Оформление заказа</h3>
+                <button class="btn-close modal__btn-close" title="Закрыть" aria-label="Закрыть окно"
+                    data-close-button></button>
+                <h3 class="modal__title">Получить условия для дизайнера</h3>
                 <form class="modal__form" action="#" method="post">
                     <div class="input">
-                        <input id="name" class="input__field input__field--text input__field--focus" type="text"
-                            name="name" placeholder="Ваше имя" />
+                        <input id="email" class="input__field  input__field--focus" type="email" name="email"
+                            placeholder="Ваш email" />
                     </div>
                     <div class="input">
                         <span class="input__error-message">Проверьте формат указанных данных</span>
-                        <input id="email" class="input__field input__field--text input__field--focus input__field--error" type="email"
-                            name="email" placeholder="Ваш email" value="ivanivanov%gmail.com"/>
-                    </div>
-                    <div class="input">
-                        <input id="tel" class="input__field input__field--text input__field--focus" type="tel"
+                        <input id="tel" class="input__field  input__field--focus input__field--error" type="tel"
                             name="tel" placeholder="+7 (000) 000-00-00*" />
                     </div>
-                    <div class="modal__amount-summary">
-                        <div class="modal__amount">
-                            <span class="modal__amount-label">Сумма:</span>
-                            <span class="modal__amount-value">56 000 ₽</span>
-                        </div>
-                        <button type="submit" class="btn btn--red modal__btn--buy">
-                            Заказать
-                        </button>
+                    <div class="input">
+                        <textarea id="message" class="input__field input__field--focus" name="message"
+                            placeholder="Комментарий"></textarea>
                     </div>
+                    <button type="submit" class="btn btn--red modal__btn--call">
+                        Отправить заявку
+                    </button>
                 </form>
             </div>
             <div class="modal__policy">
                 <p>
-                    Нажимая кнопку “Заказать”, вы даете согласие на
+                    Нажимая кнопку “Отправить заявку”, вы даете согласие на
                     обработку персональных данных и соглашаетесь с политикой
                     конфиденциальности.
                 </p>
             </div>
+            <!-- NOTIFY REQUEST INFO-->
+            <div class="notification-container" data-notification="request-info"></div>
         </div>
     </div>
     <!-- MODAL END -->
+
+    <!-- NOTIFY PRODUCT INFO -->
+    <div class="notification-container" data-notification="product-info"></div>
 
     <!-- FIXED BOTTOM PANEL START -->
     <div class="fixed-panel">
