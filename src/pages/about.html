@@ -471,20 +471,21 @@
     <div class="modal modal--call" data-modal="call">
         <div class="modal__wrapper">
             <div class="modal__main-content">
-                <button class="modal__close" title="Закрыть" data-close-button aria-label="Закрыть окно"></button>
+                <button class="btn-close modal__btn-close" title="Закрыть" aria-label="Закрыть окно"
+                    data-close-button></button>
                 <h3 class="modal__title">Заказать звонок</h3>
                 <form class="modal__form" action="#" method="post">
                     <div class="input">
-                        <input id="name" class="input__field input__field--text input__field--focus" type="text"
-                            name="name" placeholder="Ваше имя" required />
+                        <input id="name" class="input__field  input__field--focus" type="text" name="name"
+                            placeholder="Ваше имя" />
                     </div>
                     <div class="input">
-                        <input id="email" class="input__field input__field--text input__field--focus" type="email"
-                            name="email" placeholder="Ваш email" required />
+                        <input id="email" class="input__field  input__field--focus" type="email" name="email"
+                            placeholder="Ваш email" />
                     </div>
                     <div class="input">
-                        <input id="tel" class="input__field input__field--text input__field--focus" type="tel"
-                            name="tel" placeholder="+7 (000) 000-00-00*" required />
+                        <input id="tel" class="input__field  input__field--focus" type="tel" name="tel"
+                            placeholder="+7 (000) 000-00-00*" />
                     </div>
                     <button type="submit" class="btn btn--red modal__btn--call">
                         Отправить заявку
@@ -498,6 +499,8 @@
                     конфиденциальности.
                 </p>
             </div>
+            <!-- NOTIFY REQUEST INFO-->
+            <div class="notification-container" data-notification="request-info"></div>
         </div>
     </div>
     <!-- MODAL END -->
