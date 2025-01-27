@@ -58,6 +58,7 @@
     &--main-mobile-fixed,
     &--catalog-mobile-fixed {
         display: none;
+        z-index: -1;
 
         @media (max-width: 28.125rem) {
             // 450px
