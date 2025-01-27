@@ -5,7 +5,7 @@
     overflow: hidden;
     width: 100%;
     min-height: 35.75rem; // 572px
-    margin-bottom: 5rem; // 80px
+    margin-bottom: 3rem;
     z-index: 1;
 
     @media (max-width: 64rem) {
@@ -31,6 +31,11 @@
             pointer-events: none;
             z-index: 3;
         }
+    }
+
+    @media (max-width: 48rem) {
+        // 768px
+        margin-bottom: 1rem;
     }
 
     &__container {

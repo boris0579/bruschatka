@@ -35,6 +35,21 @@ export default function initSlider () {
         }
     })
 
+    // Слайдер для категорий
+    const categoriesSlider = new SplideSlider('categories', {
+        autoWidth: true,
+        arrows: false,
+        pagination: false,
+        drag: 'free',
+        live: false,
+        breakpoints: {
+            768: {
+                type: 'loop',
+            }
+        }
+    })
+
     cardSlider.init()
     reviewSlider.init()
+    categoriesSlider.init()
 }

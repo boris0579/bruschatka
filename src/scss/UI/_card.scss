@@ -107,6 +107,11 @@
         display: inline-flex;
         align-items: center;
         gap: 0.375rem; // 6px
+
+        @media (max-width: 26.5625rem) {
+            // 425px
+            flex-wrap: wrap;
+        }
     }
 
     &__price-unit {
