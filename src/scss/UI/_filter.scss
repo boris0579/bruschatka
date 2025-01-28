@@ -159,6 +159,10 @@
         border-radius: 0.25rem; // 4px
         margin: 0 0.5rem 0 1rem; // 8px 16px
         flex-shrink: 0;
+        @media (max-width: 28.125rem) {
+            // 450px
+            margin: 0 0.5rem 0 0.5rem; // 8px
+        }
     }
 
     &__divider {
@@ -175,5 +179,9 @@
 
     &__badge {
         margin-left: 1rem; // 16px
+        @media (max-width: 28.125rem) {
+            // 450px
+            margin-left: 0.5rem; // 8px
+        }
     }
 }
