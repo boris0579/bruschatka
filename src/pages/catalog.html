@@ -189,39 +189,46 @@
         </div>
         <section class="catalog-page">
             <!-- CATEGORIES START -->
-            <section class="categories">
-                <div class="container">
-                    <div class="categories__container">
-                        <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Гранит" width="161"
-                                height="123" />
-                            <span class="categories__title">Гранит</span>
-                        </div>
-                        <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит" width="161"
-                                height="123" />
-                            <span class="categories__title">Лемезит</span>
-                        </div>
-                        <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Златолит"
-                                width="161" height="123" />
-                            <span class="categories__title">Златолит</span>
-                        </div>
-                        <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Сланец" width="161"
-                                height="123" />
-                            <span class="categories__title">Сланец</span>
-                        </div>
-                        <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Песчаник"
-                                width="161" height="123" />
-                            <span class="categories__title">Песчаник</span>
-                        </div>
-                        <div class="categories__item">
-                            <img class="categories__image" src="../assets/images/category.jpg" alt="Кварцит" width="161"
-                                height="123" />
-                            <span class="categories__title">Кварцит</span>
-                        </div>
+            <section class="categories" data-splide="categories">
+                <div class="container categories__container splide">
+                    <div class="splide__track">
+                        <ul class="categories__inner splide__list">
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Гранит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Гранит</span>
+                            </li>
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Лемезит</span>
+                            </li>
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Лемезит</span>
+                            </li>
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Лемезит</span>
+                            </li>
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Лемезит</span>
+                            </li>
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Лемезит</span>
+                            </li>
+                            <li class="categories__item splide__slide">
+                                <img class="categories__image" src="../assets/images/category.jpg" alt="Лемезит"
+                                    width="161" height="123" />
+                                <span class="categories__title">Лемезит</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -357,614 +364,786 @@
                     </div>
                     <!-- PROMO BLOCK END -->
                 </section>
-                <section class="card-list">
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
+                <div class="catalog">
+                    <!-- Категория 1 -->
+                    <section class="catalog__section">
+                        <header class="catalog__header">
+                            <h2 class="catalog__title">Гранит</h2>
+                            <div class="catalog__divider"></div>
+                            <a href="category.html" class="btn btn--outline-main catalog__button" title="Показать всё">
+                                Показать всё
+                                <span class="btn__icon btn__icon--main" aria-hidden="true"></span>
+                            </a>
+                        </header>
+                        <div class="catalog__content" data-splide="catalog-card">
+                            <div class="splide"
+                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
                                 <div class="splide__track">
-                                    <ul class="splide__list">
+                                    <ul class="catalog__splide-inner splide__list">
+                                        <!-- CARD START -->
                                         <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
                                         </li>
+                                        <!-- CARD END -->
+                                        <!-- CARD START -->
                                         <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
                                         </li>
+                                        <!-- CARD END -->
+                                        <!-- CARD START -->
                                         <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
                                         </li>
+                                        <!-- CARD END -->
+                                        <!-- CARD START -->
+                                        <li class="splide__slide">
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
+                                        </li>
+                                        <!-- CARD END -->
                                     </ul>
                                 </div>
                             </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
+                        </div>
+                    </section>
+
+                    <!-- Категория 2 -->
+                    <section class="catalog__section">
+                        <header class="catalog__header">
+                            <h2 class="catalog__title">Лемезит</h2>
+                            <div class="catalog__divider"></div>
+                            <a href="category.html" class="btn btn--outline-main catalog__button" title="Показать всё">
+                                Показать всё
+                                <span class="btn__icon btn__icon--main" aria-hidden="true"></span>
+                            </a>
                         </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
-
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
+                        <div class="catalog__content" data-splide="catalog-card">
+                            <div class="splide"
+                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
                                 <div class="splide__track">
-                                    <ul class="splide__list">
+                                    <ul class="catalog__splide-inner splide__list">
+                                        <!-- CARD START -->
                                         <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
                                         </li>
+                                        <!-- CARD END -->
+                                        <!-- CARD START -->
                                         <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
                                         </li>
+                                        <!-- CARD END -->
+                                        <!-- CARD START -->
                                         <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
                                         </li>
+                                        <!-- CARD END -->
+                                        <!-- CARD START -->
+                                        <li class="splide__slide">
+                                            <article class="card" data-href="pages/product.html"
+                                                aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
+                                                <span class="badge badge--sale card__badge">Скидка -20%!</span>
+                                                <aside class="card__aside" data-splide="card-slider">
+                                                    <div class="splide">
+                                                        <div class="splide__track">
+                                                            <ul class="splide__list">
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Изображение брусчатки из сланца"
+                                                                            class="card__img" width="260"
+                                                                            height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Второе изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                                <li class="splide__slide">
+                                                                    <figure class="card__figure">
+                                                                        <img src="../assets/images/card.jpg"
+                                                                            alt="Третье изображение" class="card__img"
+                                                                            width="260" height="185" />
+                                                                    </figure>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <header class="card__header">
+                                                    <span class="card__info">В наличии</span>
+                                                    <h3 class="card__title">Брусчатка из сланца квадрат 100х100х40мм
+                                                    </h3>
+                                                </header>
+                                                <section class="card__body">
+                                                    <div class="card__price-container">
+                                                        <span class="card__current-price">1200 ₽ </span>
+                                                        <span class="card__price-info">
+                                                            <span class="card__old-price">1400 ₽</span>
+                                                            <span class="card__price-unit">за кв.м</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="card__color-wrapper">
+                                                        <span class="card__color"
+                                                            style="background-color: #6d6d6d"></span>
+                                                        Серый
+                                                    </div>
+                                                    <dl class="features">
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Толщина</dt>
+                                                            <dd class="features__value">40 мм</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Плотность</dt>
+                                                            <dd class="features__value">2,71 г/см3</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">На поддоне</dt>
+                                                            <dd class="features__value">Пусто</dd>
+                                                        </div>
+                                                        <div class="features__item">
+                                                            <dt class="features__name">Вес поддона</dt>
+                                                            <dd class="features__value">300 кг</dd>
+                                                        </div>
+                                                    </dl>
+                                                </section>
+                                                <footer class="card__footer">
+                                                    <nav class="card__actions">
+                                                        <button class="btn btn--main card__btn"
+                                                            data-modal-target="buy-click">
+                                                            Купить в 1 клик
+                                                        </button>
+                                                        <a href="https://api.whatsapp.com/send?phone=79876543211"
+                                                            target="_blank" title="Написать в Whatsapp"
+                                                            rel="noopener noreferrer" class="btn btn--wa card__btn"
+                                                            aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
+                                                            <span class="btn__icon btn__icon--wa"></span>
+                                                            <span class="btn__text btn__text--wa"><span>Узнать в</span>
+                                                                WhatsApp</span>
+                                                        </a>
+                                                    </nav>
+                                                    <div class="card__sku">Артикул: С482921</div>
+                                                </footer>
+                                            </article>
+                                        </li>
+                                        <!-- CARD END -->
                                     </ul>
                                 </div>
                             </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
-                        </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
+                        </div>
+                    </section>
+                </div>
 
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
-                        </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
-
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
-                        </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
-
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
-                        </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
-
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
-                        </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
-
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <!-- CARD START -->
-                    <article class="card" data-href="pages/product.html"
-                        aria-label="Подробнее о товаре: Брусчатка из сланца квадрат 100х100х40мм">
-                        <span class="badge badge--sale card__badge">Скидка -20%!</span>
-                        <aside class="card__aside" data-splide="card-slider">
-                            <div class="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg"
-                                                    alt="Изображение брусчатки из сланца" class="card__img" width="260"
-                                                    height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                        <li class="splide__slide">
-                                            <figure class="card__figure">
-                                                <img src="../assets/images/card.jpg" alt="Второе изображение"
-                                                    class="card__img" width="260" height="185" />
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </aside>
-                        <header class="card__header">
-                            <span class="card__info">В наличии</span>
-                            <h2 class="card__title">
-                                Брусчатка из сланца квадрат 100х100х40мм
-                            </h2>
-                        </header>
-                        <section class="card__body">
-                            <div class="card__price-container">
-                                <span class="card__current-price">1200 ₽ </span>
-                                <span class="card__price-info">
-                                    <span class="card__old-price">1400 ₽</span>
-                                    <span class="card__price-unit">за кв.м</span>
-                                </span>
-                            </div>
-
-                            <div class="card__color-wrapper">
-                                <span class="card__color" style="background-color: #6d6d6d"></span>
-                                Серый
-                            </div>
-
-                            <dl class="features">
-                                <div class="features__item">
-                                    <dt class="features__name">Толщина</dt>
-                                    <dd class="features__value">40 мм</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Плотность</dt>
-                                    <dd class="features__value">2,71 г/см3</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">На поддоне</dt>
-                                    <dd class="features__value">Пусто</dd>
-                                </div>
-                                <div class="features__item">
-                                    <dt class="features__name">Вес поддона</dt>
-                                    <dd class="features__value">300 кг</dd>
-                                </div>
-                            </dl>
-                        </section>
-                        <footer class="card__footer">
-                            <nav class="card__actions">
-                                <button class="btn btn--main card__btn" data-modal-target="buy-click">
-                                    Купить в 1 клик
-                                </button>
-                                <a href="https://api.whatsapp.com/send?phone=79876543211" target="_blank"
-                                    title="Написать в Whatsapp" rel="noopener noreferrer" class="btn btn--wa card__btn"
-                                    aria-label="Открыть чат в WhatsApp с номером +7 (987) 654-32-11">
-                                    <span class="btn__icon btn__icon--wa"></span>
-                                    <span class="btn__text btn__text--wa"><span>Узнать в</span> WhatsApp</span>
-                                </a>
-                            </nav>
-                            <div class="card__sku">Артикул: С482921</div>
-                        </footer>
-                    </article>
-                    <!-- CARD END -->
-                    <button class="btn btn--outline-main card__btn-show">
-                        Показать ещё
-                        <span class="btn__icon btn__icon--main" aria-hidden="true"></span>
-                    </button>
-                </section>
             </div>
             <!-- PROMO BLOCK MOBILE START -->
             <div class="promo-block promo-block--catalog promo-block--catalog-mobile">

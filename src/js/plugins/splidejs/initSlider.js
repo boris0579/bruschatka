@@ -49,6 +49,35 @@ export default function initSlider () {
         }
     })
 
+    // Карточки каталог
+    const catalogCard = new SplideSlider('catalog-card', {
+        live: false, // Отключение живого обновления
+        width: 'auto', // Автоматическая ширина слайдера
+        pagination: false, // Убираем пагинацию
+        arrows: true, // Включаем стрелки
+        rewind: true, // Переключение в начало после последнего слайда
+        perPage: 3, // Количество карточек на одном экране
+        gap: '2.5rem', // Отступы между карточками (40px)
+        breakpoints: {
+            // При ширине экрана <= 1350px
+            1350: {
+                arrows: false, // Скрываем стрелки
+                type: 'loop', // Включаем циклический слайдер
+                fixedWidth: '18.75rem' // Фиксированная ширина карточки (300px = 18.75rem)
+            },
+            // При ширине экрана <= 1200px
+            1200: {
+                fixedWidth: '16.25rem', // Фиксированная ширина карточки (260px)
+                gap: '1rem' // Отступы между карточками (16px)
+            },
+            // При ширине экрана <= 450px
+            450: {
+                fixedWidth: '10.8rem', // Фиксированная ширина карточки (173px)
+                gap: '0'
+            }
+        }
+    })
+
     // Основной слайдер для продукта
     const mainImage = new SplideSlider('main-image', {
         type: 'fade', // Плавное переключение между изображениями
@@ -87,6 +116,7 @@ export default function initSlider () {
     mainImage.sync(thumbnails)
 
     //
+    catalogCard.init()
     cardSlider.init()
     reviewSlider.init()
     categoriesSlider.init()

@@ -3,7 +3,7 @@
 .card {
     min-width: 9.375rem; // 150px
     background: #f5f5f5;
-    outline: 0.03125rem solid #d6d6d6; // 0.5px
+    border: 0.03125rem solid #d6d6d6; // 0.5px
     border-radius: 0.5rem; // 8px
     overflow: hidden;
     padding: 0 1.5rem; // 24px
@@ -26,6 +26,10 @@
             // 450px
             height: 8.4375rem; // 135px
         }
+    }
+
+    &__splide-inner {
+        gap: 0.625rem; // 10px
     }
 
     &__img {

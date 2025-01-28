@@ -40,7 +40,6 @@
             margin-top: 3rem; // 48px
             padding: 2rem;
             max-height: 20.4375rem; // 327px
-            border-radius: 0.5rem 0.5rem 0 0;
         }
     }
 
@@ -69,6 +68,7 @@
             margin: 0;
             max-height: max-content;
             z-index: 11;
+            border-radius: 0.5rem 0.5rem 0 0;
         }
     }
 
