@@ -1,34 +1,62 @@
 import Splide from '@splidejs/splide' // Импортируем библиотеку Splide
 
-// Класс для управления слайдерами Splide
+/**
+ * Класс для управления слайдерами Splide
+ */
 export default class SplideSlider {
-    // Конструктор принимает атрибут (для селектора) и опции для конфигурации слайдера
+    /**
+     * Создаёт экземпляр слайдера
+     * @param {string} attribute - Атрибут для поиска элемента с слайдером
+     * @param {Object} options - Опции для конфигурации слайдера
+     */
     constructor (attribute, options) {
-        this.attribute = attribute // Атрибут для поиска элементов (например, 'card-slider')
+        this.attribute = attribute // Атрибут для поиска элементов
         this.options = options // Опции конфигурации Splide
+        this.splide = null // Для хранения экземпляра Splide
     }
 
-    // Метод для инициализации слайдеров
+    /**
+     * Метод для инициализации слайдера
+     */
     init () {
-        // Ищем все элементы с атрибутом data-splide="значение" и внутри них элемент с классом .splide
-        const elements = document.querySelectorAll(
+        const element = document.querySelector(
             `[data-splide="${this.attribute}"] .splide`
         )
 
-        // Если элементы не найдены, выводим ошибку в консоль и прекращаем выполнение
-        if (elements.length === 0) {
+        if (!element) {
+            console.warn(`Элемент с атрибутом "${this.attribute}" не найден.`)
             return
         }
 
-        // Для каждого найденного элемента создаём и монтируем Splide слайдер
-        elements.forEach(element => {
-            try {
-                const splide = new Splide(element, this.options) // Создаём новый экземпляр слайдера
-                splide.mount() // Монтируем слайдер (инициализация)
-            } catch (error) {
-                // В случае ошибки при создании или монтировании, выводим сообщение об ошибке
-                console.error('Error initializing Splide slider:', error)
-            }
-        })
+        try {
+            this.splide = new Splide(element, this.options)
+            this.splide.mount()
+        } catch (error) {
+            console.error('Ошибка при инициализации слайдера Splide:', error)
+        }
+    }
+
+    /**
+     * Метод для синхронизации слайдера с другим слайдером
+     * @param {SplideSlider} secondarySlider - Второй слайдер для синхронизации
+     */
+    sync (secondarySlider) {
+        if (!(secondarySlider instanceof SplideSlider)) {
+            console.error(
+                'Переданный слайдер не является экземпляром SplideSlider.'
+            )
+            return
+        }
+
+        if (!this.splide || !secondarySlider.splide) {
+            console.warn('Один или оба слайдера не инициализированы.')
+            return
+        }
+
+        try {
+            this.splide.sync(secondarySlider.splide)
+        } catch (error) {
+            console.error('Ошибка при синхронизации слайдеров Splide:', error)
+        }
     }
 }

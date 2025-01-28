@@ -229,37 +229,63 @@
             <!-- -->
 
             <div class="container product__wrapper">
-                <div class="product__media" data-product-gallery>
-                    <div class="product__thumbnails">
-                        <ul class="product__thumbnails-list">
-                            <li class="product__thumbnail product__thumbnail--active">
-                                <img src="../assets/images/1.jpg" alt="Thumbnail 1" class="product__thumbnail-image"
-                                    data-thumbnail-image />
-                            </li>
-                            <li class="product__thumbnail">
-                                <img src="../assets/images/2.jpg" alt="Thumbnail 2" class="product__thumbnail-image"
-                                    data-thumbnail-image />
-                            </li>
-                            <li class="product__thumbnail">
-                                <img src="../assets/images/3.jpg" alt="Thumbnail 3" class="product__thumbnail-image"
-                                    data-thumbnail-image />
-                            </li>
-                            <li class="product__thumbnail">
-                                <img src="../assets/images/3.jpg" alt="Thumbnail 3" class="product__thumbnail-image"
-                                    data-thumbnail-image />
-                            </li>
-                            <li class="product__thumbnail">
-                                <img src="../assets/images/3.jpg" alt="Thumbnail 3" class="product__thumbnail-image"
-                                    data-thumbnail-image />
-                            </li>
-                        </ul>
+                <div class="product__media">
+                    <!-- PRODUCT SLIDER thumbnails START -->
+                    <div data-splide="thumbnails">
+                        <div class="product__thumbnails splide">
+                            <div class="splide__track">
+                                <ul class="product__thumbnails-list splide__list">
+                                    <li class="product__thumbnail splide__slide">
+                                        <img src="../assets/images/1.jpg" alt="Thumbnail 1"
+                                            class="product__thumbnail-image" />
+                                    </li>
+                                    <li class="product__thumbnail splide__slide">
+                                        <img src="../assets/images/2.jpg" alt="Thumbnail 2"
+                                            class="product__thumbnail-image" />
+                                    </li>
+                                    <li class="product__thumbnail splide__slide">
+                                        <img src="../assets/images/3.jpg" alt="Thumbnail 3"
+                                            class="product__thumbnail-image" />
+                                    </li>
+                                    <li class="product__thumbnail splide__slide">
+                                        <img src="../assets/images/3.jpg" alt="Thumbnail 3"
+                                            class="product__thumbnail-image" />
+                                    </li>
+                                    <li class="product__thumbnail splide__slide">
+                                        <img src="../assets/images/3.jpg" alt="Thumbnail 3"
+                                            class="product__thumbnail-image" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="product__main-media">
-                        <span class="badge badge--hit product__badge">Хит</span>
-                        <img src="../assets/images/1.jpg" alt="Main product image" class="product__image"
-                            data-main-image />
+                    <!---->
+                    <!-- PRODUCT SLIDER main START -->
+                    <div data-splide="main-image">
+                        <div class="product__main-media splide">
+                            <span class="badge badge--hit product__badge">Хит</span>
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="product__main-item splide__slide">
+                                        <img src="../assets/images/1.jpg" alt="Thumbnail 1" class="product__image" />
+                                    </li>
+                                    <li class="product__main-item splide__slide">
+                                        <img src="../assets/images/2.jpg" alt="Thumbnail 2" class="product__image" />
+                                    </li>
+                                    <li class="product__main-item splide__slide">
+                                        <img src="../assets/images/3.jpg" alt="Thumbnail 3" class="product__image" />
+                                    </li>
+                                    <li class="product__main-item splide__slide">
+                                        <img src="../assets/images/3.jpg" alt="Thumbnail 3" class="product__image" />
+                                    </li>
+                                    <li class="product__main-item splide__slide">
+                                        <img src="../assets/images/3.jpg" alt="Thumbnail 3" class="product__image" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <!---->
                 </div>
 
                 <div class="product__details">

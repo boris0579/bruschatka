@@ -58,7 +58,6 @@
     &--main-mobile-fixed,
     &--catalog-mobile-fixed {
         display: none;
-        z-index: -1;
 
         @media (max-width: 28.125rem) {
             // 450px
@@ -78,6 +77,7 @@
     }
 
     &--hide {
+        z-index: -1;
         @include fade-out(0.625rem, 0.3s, ease, forwards);
     }
 
