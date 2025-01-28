@@ -77,7 +77,7 @@
     }
 
     &--hide {
-        z-index: -1;
+        pointer-events: none;
         @include fade-out(0.625rem, 0.3s, ease, forwards);
     }
 
