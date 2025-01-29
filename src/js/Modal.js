@@ -71,6 +71,7 @@ class Modal {
      * Скрывает все модальные окна при загрузке страницы.
      */
     init () {
+        if (!this.overlay) return
         // Скрываем все модальные окна при загрузке страницы
         this.modals.forEach(modal => (modal.style.display = 'none'))
         this.overlay.classList.remove('active-modal')

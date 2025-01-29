@@ -10,6 +10,8 @@ class NavbarScrollEffect {
      */
     constructor (navbarSelector) {
         this.navbar = document.querySelector(navbarSelector) // Находим элемент навбара
+
+        if (!this.navbar) return
         this.navbarHeight = this.navbar.offsetHeight // Высота навбара
 
         this.init() // Инициализация
