@@ -45,6 +45,9 @@ export default function initSlider () {
         breakpoints: {
             768: {
                 type: 'loop'
+            },
+            450: {
+                focus: 'center'
             }
         }
     })
@@ -73,7 +76,7 @@ export default function initSlider () {
             // При ширине экрана <= 450px
             450: {
                 fixedWidth: '10.8rem', // Фиксированная ширина карточки (173px)
-                gap: '0',
+                gap: '0'
             },
             425: {
                 focus: 'center',
