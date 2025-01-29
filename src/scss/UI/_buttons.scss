@@ -13,6 +13,7 @@
     border: 1px solid transparent;
     gap: 0.5rem; // 8px
     transition: $transition-slow;
+    white-space: nowrap;
 
     &--main {
         background-color: $main-color;

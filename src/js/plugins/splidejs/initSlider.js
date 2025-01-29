@@ -53,6 +53,7 @@ export default function initSlider () {
     const catalogCard = new SplideSlider('catalog-card', {
         live: false, // Отключение живого обновления
         width: 'auto', // Автоматическая ширина слайдера
+        type: 'loop', // Включаем циклический слайдер
         pagination: false, // Убираем пагинацию
         arrows: true, // Включаем стрелки
         rewind: true, // Переключение в начало после последнего слайда
@@ -62,7 +63,6 @@ export default function initSlider () {
             // При ширине экрана <= 1350px
             1350: {
                 arrows: false, // Скрываем стрелки
-                type: 'loop', // Включаем циклический слайдер
                 fixedWidth: '18.75rem' // Фиксированная ширина карточки (300px = 18.75rem)
             },
             // При ширине экрана <= 1200px
