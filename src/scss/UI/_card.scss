@@ -25,6 +25,7 @@
         @media (max-width: 28.125rem) {
             // 450px
             height: 8.4375rem; // 135px
+            min-width: 190px;
         }
     }
 
@@ -142,14 +143,6 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem; // 8px
-
-        // @media (max-width: 75rem) {
-
-        //     // 1200px
-        //     .btn__text--wa span {
-        //         display: none;
-        //     }
-        // }
     }
 
     &__btn {

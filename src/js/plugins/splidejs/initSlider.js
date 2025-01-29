@@ -42,6 +42,8 @@ export default function initSlider () {
         pagination: false,
         drag: 'free',
         live: false,
+        // waitForTransition: true,
+        wheel: true,
         breakpoints: {
             768: {
                 type: 'loop'
