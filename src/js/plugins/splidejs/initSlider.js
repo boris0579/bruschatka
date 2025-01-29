@@ -73,7 +73,11 @@ export default function initSlider () {
             // При ширине экрана <= 450px
             450: {
                 fixedWidth: '10.8rem', // Фиксированная ширина карточки (173px)
-                gap: '0'
+                gap: '0',
+            },
+            425: {
+                focus: 'center',
+                gap: '0.75rem' // 12px
             }
         }
     })

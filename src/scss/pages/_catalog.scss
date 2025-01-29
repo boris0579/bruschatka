@@ -50,6 +50,11 @@
             // 450px
             gap: 1rem;
         }
+
+        @media (max-width: 26.5625rem) {
+            // 425px
+            gap: 0;
+        }
     }
 
     &__title {
