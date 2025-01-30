@@ -97,6 +97,10 @@
         color: $main-color;
         white-space: nowrap;
 
+        &--sale {
+            color: #34A400;
+        }
+
         @media (max-width: 75rem) {
             // 1200px
             font-size: 2rem; // 32px
