@@ -2,21 +2,16 @@
 
 .card {
     min-width: 9.375rem; // 150px
+    height: 100%;
     background: #f5f5f5;
     border: 0.03125rem solid #d6d6d6; // 0.5px
     border-radius: 0.5rem; // 8px
     overflow: hidden;
-    padding: 0 1.5rem; // 24px
     position: relative;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
 
-    @media (max-width: 75rem) {
-        // 1200px
-        padding: 0 1rem;
-    }
 
     &__figure {
         width: 100%;
@@ -43,22 +38,25 @@
 
     &__aside {
         position: relative;
-        margin: 0 -1.5rem; // -24px
     }
 
-    &__header {
-        padding-top: 1rem;
-        flex: 1;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 1.5rem 0.75rem 1.5rem; // 16px 12px 24px
+        height: 100%;
 
         @media (max-width: 75rem) {
             // 1200px
-            padding-top: 0.625rem; // 10px
+            padding: 0.625rem 1rem 0.75rem 1rem; // 10px 12px 16px
         }
     }
 
     &__body {
         display: flex;
         flex-direction: column;
+        flex: 1;
         gap: 1rem;
         margin-top: 0.75rem; // 12px
     }
@@ -79,7 +77,7 @@
         font-size: 0.875rem; // 14px
         line-height: 1.1875rem; // 19px
         color: #6d6d6d;
-        margin: 0.5rem 0 0.75rem; // 8px 0 12px
+        margin-top: 0.5rem; // 8px 0 12px
     }
 
     &__info {
