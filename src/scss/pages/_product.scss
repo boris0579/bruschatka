@@ -124,6 +124,10 @@
         }
     }
 
+    &__main-media .splide__track {
+        height: 100%;
+    }
+
     &__main-item {
 
         /* Активный слайд в главном слайдере */
@@ -409,7 +413,7 @@
                     border-radius: 50%;
 
                     &.is-active {
-                        background: #744746;
+                        background: $main-color;
                     }
                 }
             }
