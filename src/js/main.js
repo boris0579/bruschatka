@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Select
     const selectElements = document.querySelectorAll('[data-select]')
+
     if (selectElements.length > 0) {
         selectElements.forEach(selectElement => {
             // Создаем экземпляр Select для каждого элемента
@@ -66,12 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Добавляем слушатель события для каждого селекта
             selectElement.addEventListener('selectChanged', event => {
-                console.log(
-                    'Выбран вариант для этого select:',
-                    event.detail.text
-                )
-                console.log('Значение:', event.detail.value)
+                // Получаем значение выбранного элемента
+                const selectedValue = event.detail.value
+
+                // Обновляем все селекты с таким же data-select
+                document.querySelectorAll(`[data-select="${selectElement.dataset.select}"]`).forEach(otherSelect => {
+                    if (otherSelect !== selectElement) {
+                        const otherTrigger = otherSelect.querySelector('.select__trigger')
+                        if (otherTrigger) {
+                            // Находим соответствующий пункт в другом селекте
+                            const matchingOption = otherSelect.querySelector(`[data-value="${selectedValue}"]`)
+                            if (matchingOption) {
+                                otherTrigger.textContent = matchingOption.textContent
+                                otherTrigger.dataset.value = selectedValue
+                            }
+                        }
+                    }
+                })
             })
+
+            // Сохраняем инстанс в элемент
+            selectElement.selectInstance = selectInstance
         })
     }
 
