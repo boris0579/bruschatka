@@ -67,6 +67,46 @@
         &:not(:last-child) {
             margin-bottom: 1rem; // 16px
         }
+
+        &--product {
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem; // 10px
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__key {
+        display: inline-flex;
+        width: 100%;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 0 1rem;
+            width: 100%;
+            min-width: 0.75rem; // 12px
+            height: 1rem;
+            border-bottom: 1px dashed #E0E0E0;
+        }
+
+        span {
+            flex-shrink: 0;
+            color: #6d6d6d;
+        }
+    }
+
+    &__value {
+        max-width: 100%;
+        text-align: right;
+        white-space: normal;
+        flex-shrink: 0;
     }
 
     &__text {
