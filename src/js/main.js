@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     notificationManager.show({
         content: `
         <div class="notification__label">
-            <img src="/assets/logo.png" alt="BRUSCHATKA.RU" class="notification__logo">
+            <img src="../assets/logo.png" alt="BRUSCHATKA.RU" class="notification__logo">
             <span class="notification__note">ОБРАЩАЕТ ВНИМАНИЕ</span>
         </div>
         <h3 class="notification__title">На этот товар высокий спрос!</h3>
