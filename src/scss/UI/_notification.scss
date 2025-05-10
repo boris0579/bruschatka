@@ -1,6 +1,29 @@
 @use "../base/variables" as *;
 @use "../utils/mixins" as *;
 
+.notification-container {
+    position: fixed;
+    bottom: 4.5rem; // 72px
+    right: 4rem; // 64px
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    z-index: 3;
+
+    @media (max-width: 64rem) {
+        // 1024px
+        right: 1rem; // 16px
+        bottom: 4.75rem; // 76px
+    }
+
+    @media (max-width: 48rem) {
+        // 768px
+        right: 1rem; // 16px
+        bottom: 4.75rem; // 76px
+        left: 1rem; // 16px
+    }
+}
+
 // Основной блок уведомления
 .notification {
     display: flex;
@@ -84,23 +107,11 @@
 
     // Подблок для информации о продукте
     &--product-info {
-        position: fixed;
-        bottom: 4.5rem; // 72px
-        right: 4rem; // 64px
         min-width: 30rem; // 480px
         height: 10rem; // 160px
 
-        @media (max-width: 64rem) {
-            // 1024px
-            right: 1rem; // 16px
-            bottom: 4.75rem; // 76px
-        }
-
         @media (max-width: 48rem) {
             // 768px
-            right: 1rem; // 16px
-            bottom: 4.75rem; // 76px
-            left: 1rem; // 16px
             width: auto;
             min-width: auto;
         }
@@ -204,5 +215,239 @@
     // Анимация исчезновения
     &.notification--hide {
         @include fade-out(0.625rem, 0.3s, ease, forwards);
+    }
+
+    &--desktop {
+        @media (max-width: 64rem) {
+            // 1024px
+            display: none;
+        }
+    }
+
+    &--mobile {
+        display: none;
+
+        @media (max-width: 64rem) {
+            // 1024px
+            display: block;
+        }
+    }
+
+    &--high-demand-product &__content,
+    &--delivery-info &__content {
+        padding: 1.375rem 1rem 1rem; // 22px 16px 16px
+    }
+
+    &--high-demand-product,
+    &--delivery-info {
+        max-width: max-content;
+        height: max-content;
+        margin-left: auto;
+        width: auto;
+
+        @media (max-width: 48rem) {
+            // 768px
+            margin: 0 auto;
+        }
+    }
+
+    &--high-demand-product &__logo {
+        max-width: 6.875rem; // 110px
+        object-fit: contain;
+    }
+
+    &--delivery-info &__logo {
+        max-width: 8.0625rem; // 129px
+        object-fit: contain;
+        align-self: flex-end;
+
+        @media (max-width: 48rem) {
+            // 768px
+            max-width: 6.875rem; // 110px
+        }
+    }
+
+    &--high-demand-product &__label {
+        gap: 0.5rem; // 8px
+    }
+
+    &--delivery-info &__label {
+        gap: 1rem; // 16px
+    }
+
+    &--high-demand-product &__title,
+    &--delivery-info &__title {
+        font-weight: 700;
+        font-size: 1rem; // 16px
+        line-height: 1.1875rem; // 19px
+        color: $font-color;
+    }
+
+    &--high-demand-product &__button,
+    &--delivery-info &__button {
+        margin-top: 0.5rem; // 8px
+        width: 100%;
+    }
+
+    &--high-demand-product &__text {
+        font-weight: 400;
+        font-size: 0.75rem; // 12px
+        line-height: 1rem; // 16px
+        color: $font-color;
+        margin-top: 0.5rem; // 8px
+        max-width: 14.6875rem; // 235px
+    }
+
+    &--delivery-info {
+        position: absolute;
+        z-index: 5;
+        right: 3.125rem; // 50px
+        bottom: 0.5rem; // 8px
+        left: 0;
+    }
+
+    &__label {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    &--high-demand-product &__note {
+        font-weight: 700;
+        font-size: 0.875rem; // 14px
+        line-height: 1;
+        color: $main-color;
+        align-self: flex-end;
+    }
+
+    &--delivery-info &__note {
+        font-weight: 700;
+        font-size: 0.75rem; // 12px
+        line-height: 1;
+        color: $main-color;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; // 8px
+        margin-top: 1.4375rem; // 23px
+
+        @media (max-width: 48rem) {
+            // 768px
+            margin-top: 1rem; // 16px
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__city {
+        font-weight: 500;
+        font-size: 1.375rem; // 22px
+        line-height: 120%;
+        color: $font-color;
+
+        @media (max-width: 48rem) {
+            // 768px
+            font-size: 1rem; // 16px
+        }
+    }
+
+    &__price {
+        padding: 0.25rem 0.75rem; // 4px 12px
+        background: #F5F5F5;
+        border-radius: 0.5rem; // 8px
+        font-weight: 700;
+        font-size: 1.25rem; // 20px
+        line-height: 1.1875rem; // 19px
+        color: #39B400;
+
+        @media (max-width: 48rem) {
+            // 768px
+            font-size: 0.875rem; // 14px
+        }
+    }
+
+    &__availability {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem; // 10px
+        justify-content: space-between;
+        margin-top: 0.75rem; // 12px
+
+        span:first-child {
+            font-weight: 500;
+            font-size: 1rem; // 16px
+            line-height: 1.1875rem; // 19px
+            color: $font-color;
+        }
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem; // 4px 12px
+        width: max-content;
+        height: auto;
+        background: #F5F5F5;
+        border-radius: 0.5rem; // 8px
+        color: #39B400;
+        text-align: center;
+        line-height: 1;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    &__tags {
+        display: flex;
+        justify-content: center;
+        padding: 0.25rem 1.5rem; // 4px 24px
+        background: #F5F5F5;
+        border-radius: 0.5rem; // 8px
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.875rem; // 14px
+        line-height: 1rem; // 16px
+        margin-top: 1rem; // 16px
+        color: $font-color;
+        text-align: center;
+
+        @media (max-width: 48rem) {
+            // 768px
+            font-size: 0.75rem; // 12px
+
+        }
+    }
+
+    &__divider {
+        position: relative;
+        margin: 0 0.875rem; // 14px
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            bottom: 10%;
+            width: 0.0625rem; // 1px
+            background-color: #ccc;
+        }
+    }
+
+    &--delivery-info &__divider {
+        margin: 0 1.875rem; // 30px
+    }
+
+    &--mobile {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 1000;
+        max-width: 90%;
+        width: max-content;
     }
 }

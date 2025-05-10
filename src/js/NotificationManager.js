@@ -8,7 +8,7 @@ class NotificationManager {
      * @param {string|HTMLElement} selector - CSS-селектор или элемент контейнера для уведомлений.
      */
     constructor (selector) {
-        this.container = selector
+        this.container = document.querySelector(selector)
 
         if (!this.container) {
             return
@@ -46,6 +46,9 @@ class NotificationManager {
      * @returns {HTMLElement} - Элемент уведомления.
      */
     addNotification ({ content, image = null, type = '', delay = null }) {
+        if (!this.container) {
+            return
+        }
         const notification = document.createElement('div')
         notification.className = `notification${
             type ? ` notification--${type}` : ''

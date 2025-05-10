@@ -131,68 +131,91 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    /** ПРОСТО ДЛЯ ДЕМОНСТРАЦИИ  */
-    // Найти все элементы с атрибутом data-notification
-    const notificationElements = document.querySelectorAll(
-        '[data-notification]'
-    )
+    /**
+     * Менеджер уведомлений
+     * @type {NotificationManager}
+     */
+    const notificationManager = new NotificationManager('[data-notifications]')
 
-    notificationElements.forEach(element => {
-        const notificationType = element.dataset.notification // Получаем тип уведомления
+    /**
+     * Уведомление о заявке
+     * Тип: request-info
+     */
+    // notificationManager.show({
+    //     content: `
+    //     <h3 class="notification__title">Ваша заявка отправлена!</h3>
+    //     <p class="notification__text">Мы свяжемся с вами в ближайшее время по номеру:<br>
+    //         <span>+7 (903) 111-11-11</span>
+    //     </p>
+    // `,
+    //     type: 'request-info'
+    // })
 
-        // Создаем экземпляр NotificationManager
-        const notificationManager = new NotificationManager(element)
+    /**
+     * Уведомление о заказе
+     * Тип: order-info
+     */
+    // notificationManager.show({
+    //     content: `
+    //     <h3 class="notification__title">Александр, ваш заказ принят!</h3>
+    //     <p class="notification__text notification__text--details">
+    //         Ваш заказ: Брусчатка из сланца квадрат, 5 м2, 30-39 мм
+    //     </p>
+    //     <p class="notification__text notification__text--summary">Сумма: 56 000 ₽</p>
+    //     <p class="notification__text notification__text--info">Мы свяжемся с вами в самое ближайшее время!</p>
+    // `,
+    //     image: 'assets/1.jpg',
+    //     type: 'order-info'
+    // })
 
-        // Добавляем контент уведомления в зависимости от значения атрибута
-        switch (notificationType) {
-            case 'request-info':
-                notificationManager.show({
-                    content: `
-                    <h3 class="notification__title">Ваша заявка отправлена!</h3>
-                    <p class="notification__text">Мы свяжемся с вами в ближайшее время по номеру:<br>
-                        <span>+7 (903) 111-11-11</span>
-                    </p>
-                `,
-                    type: 'request-info'
-                })
-                break
-
-            case 'order-info':
-                notificationManager.show({
-                    content: `
-                    <h3 class="notification__title">Александр, ваш заказ принят!</h3>
-                    <p class="notification__text notification__text--details">
-                        Ваш заказ: Брусчатка из сланца квадрат, 5 м2, 30-39 мм
-                    </p>
-                    <p class="notification__text notification__text--summary">Сумма: 56 000 ₽</p>
-                    <p class="notification__text notification__text--info">Мы свяжемся с вами в самое ближайшее время!</p>
-                `,
-                    image: 'assets/1.jpg',
-                    type: 'order-info'
-                })
-                break
-
-            case 'product-info':
-                notificationManager.show({
-                    content: `
-                        <h3 class="notification__title">На этот товар высокий спрос!</h3>
-                        <p class="notification__text notification__text--details">
-                            Сегодня было заказано 50м2 этого
-                            товара (Брусчатка из сланца
-                            квадрат)
-                        </p>
-                        <p class="notification__text notification__text--info">В наличии осталось: 10 штук</p>
-                    `,
-                    image: '../assets/1.jpg',
-                    type: 'product-info'
-                })
-                break
-
-            default:
-                break
-        }
+    /**
+     * Уведомление: высокий спрос на товар (с брендом)
+     * Тип: high-demand-product
+     */
+    notificationManager.show({
+        content: `
+        <div class="notification__label">
+            <img src="/assets/logo.png" alt="BRUSCHATKA.RU" class="notification__logo">
+            <span class="notification__note">ОБРАЩАЕТ ВНИМАНИЕ</span>
+        </div>
+        <h3 class="notification__title">На этот товар высокий спрос!</h3>
+        <p class="notification__text">
+            Сегодня было заказано 50м2 этого товара (Брусчатка из сланца квадрат)
+        </p>
+        <p class="notification__availability">
+            <span>Товаров в наличии осталось:</span> <span class="notification__count">10 штук</span>
+        </p>
+        <div class="notification__tags">
+            <span class="notification__tag">Популярный товар</span>
+            <span class="notification__divider"></span>
+            <span class="notification__tag">Успейте заказать</span>
+        </div>
+        <button class="btn btn--red notification__button">Оставить заявку</button>
+    `,
+        type: 'high-demand-product'
     })
 
+    /**
+     * Уведомление: высокий спрос на товар (без бренда)
+     * Тип: product-info
+     */
+    notificationManager.show({
+        content: `
+        <h3 class="notification__title">На этот товар высокий спрос!</h3>
+        <p class="notification__text notification__text--details">
+            Сегодня было заказано 50м2 этого
+            товара (Брусчатка из сланца
+            квадрат)
+        </p>
+        <p class="notification__text notification__text--info">В наличии осталось: 10 штук</p>
+    `,
+        image: '../assets/1.jpg',
+        type: 'product-info'
+    })
+
+    // На главной странице уведомление
+    new NotificationManager('[data-delivery-notification]');
+
     // Маска для телефона
-    initPhoneMask('[data-mask-phone]');
+    initPhoneMask('[data-mask-phone]')
 })
