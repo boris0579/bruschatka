@@ -213,8 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
         type: 'product-info'
     })
 
-    // На главной странице уведомление
-    new NotificationManager('[data-delivery-notification]');
+    // На главной странице уведомление в банере
+    new NotificationManager('[data-delivery-notification-desktop]');
+
+    // На главной странице уведомление фиксированное
+    new NotificationManager('[data-delivery-notification-mobile]');
 
     // Маска для телефона
     initPhoneMask('[data-mask-phone]')
